@@ -1,0 +1,237 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<script src="./script/jquery.js"></script>
+<script src="./script/jquery-ui.min.js"></script>
+<script src="./script/bootstrap.js"></script>
+<style type="text/css">
+.control-label {
+	text-align: right;
+	padding: 0px 10px;
+}
+
+.col-lg-7 {
+	padding: 0px;
+}
+
+.col-lg-7, .col-lg-5, .form-control {
+	height: 25px;
+}
+
+.form-control {
+	padding: 0px;
+}
+
+.row {
+	margin: 5px 0px;
+}
+
+.searchForm {
+	background-color: #f2f5ff;
+	border: 1px solid #cbd1d3;
+	border-radius: 7px;
+}
+#goods_guid_report1_nodata_tr{
+	text-align:center;
+}
+.cls-title{
+	font-weight:bold;
+}
+#goodsManageData{
+	font-size:13px;
+}
+.cls-data-th-list { /*数据自动列表报表数据标题行每个<td/>的样式#3AA8F3/#64A5F8*/
+	/**background-color: #64A5F8;*/
+	/* BACKGROUND-IMAGE: url(./webresources/skin/vista/images/datatitle_bg.gif); */
+	text-align: center;
+	vertical-align: middle;/* 
+	border: 1px solid #C0C0C0; */
+}
+
+.cls-data-td-list { /*数据自动列表报表数据行每个<td/>的样式*/
+	/* border: 1px solid #C0C0C0; */
+	min-height: 23px;
+	height: 23px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.cls-data-content-list {
+	/*如果cellresize配置为1或者显示了垂直滚动条，则会将单元格内容自动包在一个<div/>中，下面就是设置这个div的样式*/
+	/*white-space:nowrap;*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%
+}
+.cls-data-th-detail{
+	background-color: #EBF0FE;
+	font-size:13px;
+}
+</style>
+</head>
+<body marginwidth="0" marginheight="0">
+	<div id="">
+		<form action="" method="post" class="searchForm" role="form">
+			<div class="row">
+				<div class="col-lg-3">
+					<label class="control-label col-lg-5">厂家编号</label>
+					<div class="col-lg-7">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<label class="control-label col-lg-5">商品索引号</label>
+					<div class="col-lg-7">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<label class="control-label col-lg-5">商品编号</label>
+					<div class="col-lg-7">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<label class="control-label col-lg-5">商品名称</label>
+					<div class="col-lg-7">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3">
+					<label class="control-label col-lg-5">商品颜色</label>
+					<div class="col-lg-7">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<label class="control-label col-lg-5">商品尺寸</label>
+					<div class="col-lg-7">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<label class="control-label col-lg-5">商品材质</label>
+					<div class="col-lg-7">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<label class="control-label col-lg-5">订货详情</label>
+					<div class="col-lg-7">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3">
+					<label class="control-label col-lg-5">隐藏的商品</label>
+					<div class="col-lg-7">
+						<select class="form-control">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-lg-1">
+					<label class="checkbox-inline"> <input type="checkbox"
+						id="inlineCheckbox1" value="option1"> 不带/
+					</label>
+				</div>
+
+				<div class="col-lg-2">
+					<label class="checkbox-inline"> <input type="checkbox"
+						id="inlineCheckbox1" value="option1"> 分析无库存商品
+					</label>
+				</div>
+				<div class="col-lg-1">
+					<button>查询</button>
+				</div>
+			</div>
+		</form>
+		<font color="red">说明：</font> <font color="blue">删除记录时，如果有库存量则不会删除；鼠标放在索引号上显示该商品的库存信息</font>
+		<div style="height: 15px;"></div>
+
+		<div id="">
+			<form method="post" onsubmit="return false" style="margin: 0px">
+				<span class="cls-title">商品资料</span> 
+				<div 
+					style="float:right;"><input type="button"
+					value="隐藏商品" id=""
+					name=""
+					onclick=""><span
+					style="margin-left: 9px;"></span><input type="button"
+					value="取消隐藏商品" id=""
+					name=""
+					onclick=""><span
+					style="margin-left: 9px;"></span><input type="button" value="新增商品"
+					id=""
+					name=""
+					onclick="" /><span
+					style="margin-left: 9px;"></span><input type="button" value="删 除"
+					class="cls-button"><span style="margin-left: 9px;"></span><input type="button"
+					value="导出Excel" class="cls-button2" /></div>
+
+				<table class="cls-data-table" width="100%"
+					id="goodsManageData" >
+					<thead>
+						<tr class="cls-data-tr-head-list">
+							<td class="cls-data-th-list" width="2%" align="center"
+								valign="middle"><input type="checkbox" /></td>
+							<td class="cls-data-th-list" width="3%">序号</td>
+							<td class="cls-data-th-list" width="4%">编辑</td>
+							<td class="cls-data-th-list" width="6%">索引号</td>
+							<td class="cls-data-th-list" width="8%">商品编号</td>
+							<td class="cls-data-th-list" width="15%">商品名称</td>
+							<td class="cls-data-th-list" width="5%">商品颜色</td>
+							<td class="cls-data-th-list" width="5%">商品尺寸</td>
+							<td class="cls-data-th-list" width="15%">商品材质</td>
+							<td class="cls-data-th-list" width="4%">进价</td>
+							<td class="cls-data-th-list" width="4%">售价</td>
+							<td class="cls-data-th-list" width="4%">乐从售价</td>
+							<td class="cls-data-th-list" width="4%">毛利</td>
+							<td class="cls-data-th-list" width="3%">单位</td>
+							<td class="cls-data-th-list" width="3%">货期</td>
+							<td class="cls-data-th-list" width="10%">订货详情</td>
+							<td class="cls-data-th-list" width="7%">录入员</td>
+							<td class="cls-data-th-list" width="8%">录入日期</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr id="goods_guid_report1_nodata_tr" class="">
+							<td class="cls-data-td-editlist" bgcolor="#ffffff" colspan="18">没有数据</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</form>
+		</div>
+
+		<span id="goods_metadata" style="display: none;" pageid="goods"
+			componentid="goods" refreshcomponentguid="goods"
+			componenttypename="container.page" childcomponentids="report1"></span>
+		</td>
+		<div id="wx_titletree_container" style="display: none;"
+			class="titletree_container">
+			<div id="titletree_container_inner" class="titletree_container_inner">
+				<div id="tree" class="bbit-tree">
+					<div class="bbit-tree-bwrap">
+						<div class="bbit-tree-body" id="wx_titletree_content"></div>
+					</div>
+				</div>
+			</div>
+			<div id="wx_titletree_buttoncontainer"
+				style="padding-top: 3px; padding-bottom: 5px; text-align: center"></div>
+		</div>
+		<div id="LOADING_IMG_ID" class="cls-loading-img"></div>
+	</div>
+	<div
+		style="display: none; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; cursor: move; opacity: 0; background: rgb(255, 255, 255);"></div>
+</body>
+</html>

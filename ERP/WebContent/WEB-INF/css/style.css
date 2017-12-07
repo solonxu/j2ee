@@ -1,0 +1,19 @@
+table{
+	border-collapse: collapse;
+}
+table.dataTable{
+	border-collapse: collapse;
+}
+table td{
+	border:1px solid #C0C0C0;
+}
+table tbody{
+
+}
+table thead{
+	background-color: #DFE6FA;
+	height:20px;
+}
+table.dataTable tbody tr td.highlight{
+	background-color: #ccfaff !important;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="./css/jquery-ui.min.css">
+<link rel="stylesheet" href="./css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="./css/style.css">
+<script src="./script/jquery.js"></script>
+<script src="./script/jquery-ui.min.js"></script>
+<script src="./script/jquery.dataTables.min.js"></script>
+<style type="text/css">
+body{
+	font-size : 14px;
+	margin:0px auto;
+}
+.detail{
+	margin:30px 10px 0px 10px;
+}
+
+table {
+	margin-top:20px;
+	text-align: center;
+}
+#table{
+	width:100%;
+	margin:0px;
+}
+</style>
+<script type="text/javascript">
+	$(function() {
+		var table = $("#table").DataTable({
+			"language": {
+	            "lengthMenu": "每页显示 _MENU_ 条记录",
+	            "zeroRecords": "没有数据显示",
+	            "info": "当前第_PAGE_页/_PAGES_页 共_TOTAL_条记录",
+	            "infoEmpty": "无数据可用",
+	            "paginate": {
+	                "previous": "上页",
+	                "next":"下页"
+	             }
+	        },
+	        responsive: true
+		});
+		$(window).on('resize', function () {
+			console.log(table);
+			var width = $("#table_wrapper").width();
+			$("#table").width(width);
+			//table.fnAdjustColumnSizing();
+		} );
+		$("#table tbody").on('mouseenter', 'td', function () {
+            $(this).siblings("td").removeClass( 'highlight' );
+            $(this).siblings("td").addClass('highlight');
+            $(this).removeClass( 'highlight' );
+            $(this).addClass('highlight');
+		});
+		$("#table tbody").on('mouseleave', 'td', function () {
+			$(this).siblings("td").removeClass( 'highlight' );
+			$(this).removeClass( 'highlight' );
+		});
+	});
+	//var json = [{"name":"shifre","age":"28","staff":"123456"},{"name":"shifre","age":"28","staff":"123456"}];
+</script>
+</head>
+<body>
+	
+		<div class="detail">
+			<table id="table" class="order-column" >
+				<thead>
+					<tr>
+						<td>name</td>
+						<td>销售单编号</td>
+						<td>staff</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>test</td>
+						<td>
+							<span style="color:#0000FF;cursor:pointer;" onclick="window.open('./showReport.html','查看销售单明细','toolbar=no,location=no,menubar=no')">6800022</span>
+						</td>
+						<td>test</td>
+					</tr>
+					<tr>
+						<td>123</td>
+						<td>test</td>
+						<td>test</td>
+					</tr>
+					<tr>
+						<td>gba</td>
+						<td>test</td>
+						<td>test</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+</body>
+</html>
