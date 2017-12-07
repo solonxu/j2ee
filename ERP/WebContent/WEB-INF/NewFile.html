@@ -146,6 +146,9 @@ a.ui-button:active,
 .nav-tabs {
 	margin-left:5px;
 }
+.nav-tabs li{
+	/* background-color:#f5f8f9; */
+}
 .accountInfo {
     display: block;
     overflow: hidden;
@@ -202,6 +205,23 @@ a.ui-button:active,
 }
 #top .changeCityContent a{
 	color:black;
+}
+#container .nav-tabs .close{
+	background: url(./images/tabspage_icon.png) no-repeat;
+	display: block;
+    overflow: hidden;
+    width: 11px;
+    height: 11px;
+    padding: 0;
+    text-indent: -1000px;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    border:none;
+    cursor: pointer;
+}
+#container .nav-tabs .close.hover{
+	background-position:bottom;
 }
 </style>
 <script type="text/javascript">
@@ -260,16 +280,43 @@ a.ui-button:active,
 			$("#menu").accordion( "refresh");
 			$("iframe").height($("#middle").height()-$("#container .accountInfo").height()-$("#container ul").height());
 		});
+		$("#container .nav .close").on("mouseover", function(){
+			$(this).addClass("hover");
+		});
+		$("#container .nav .close").on("mouseout", function(){
+			$(this).removeClass("hover");
+		});
 	});
 	function goHome(menuIndex){
-		$("#menu li").removeClass("select");
-		$(menuIndex).parent("li").addClass("select");
 		$("iframe").attr("src","./homePage.html");
+		$(".nav.nav-tabs li").removeClass("active");
+		$(".nav.nav-tabs li.myHome").addClass("active");
 	}
 	function goGoodsManage(menuIndex){
+		//更新菜单的select状态
 		$("#menu li").removeClass("select");
-		$(menuIndex).parent("li").addClass("select");
-		$("iframe").attr("src","./goodsManage.html");
+		$("#menu li."+menuIndex+"").addClass("select");
+		var exist = $(".nav.nav-tabs li").hasClass("goodsManage");
+		if(!!exist){
+			//这个标签已经存在
+			if(!$(".nav.nav-tabs li.goodsManage").hasClass("active")){
+				//但是没有激活
+				$(".nav.nav-tabs li").removeClass("active");
+				$(".nav.nav-tabs li.goodsManage").addClass("active");
+				$("iframe").attr("src","./goodsManage.html");
+			}
+		}else{
+			$(".nav.nav-tabs li").removeClass("active");
+			$(".nav.nav-tabs").append('<li class="active goodsManage"><a onclick="javascript:goGoodsManage(\'goodsManage\');">商品资料</a><a onclick="removeTab(\'goodsManage\')" class="close">close</a></li>');
+			$("iframe").attr("src","./goodsManage.html");
+		}
+	}
+	function removeTab(menuIndex){
+		$(".nav li."+menuIndex+"").remove();
+		$("iframe").attr("src","./homePage.html");
+		$(".nav.nav-tabs li").removeClass("active");
+		$(".nav.nav-tabs li.myHome").addClass("active");
+		
 	}
 </script>
 </head>
@@ -306,9 +353,9 @@ a.ui-button:active,
 					<h3>基本信息</h3>
 					<div>
 						<ul>
-							<li><img src="./images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:goHome(this);">库存资料</a></li>
-							<li><img src="./images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:goGoodsManage(this);">商品资料管理</a></li>
-							<li><img src="./images/file.png"/>&nbsp;&nbsp;<a>员工通讯录</a></li>
+							<li class="spareInfor"><img src="./images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:goHome('spareInfor');">库存资料</a></li>
+							<li class="goodsManage"><img src="./images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:goGoodsManage('goodsManage');">商品资料管理</a></li>
+							<li class="staffContact"><img src="./images/file.png"/>&nbsp;&nbsp;<a>员工通讯录</a></li>
 						</ul>
 					</div>
 					<h3>客服管理</h3>
@@ -340,7 +387,10 @@ a.ui-button:active,
 					</div>
 					</div>	 -->
 				<ul class="nav nav-tabs">
-  					<li class="active"><a href="#">Home</a></li>
+  					<li class="active myHome">
+  						<a onclick="javascript:goHome('spareInfor')">Home</a>
+  						
+  					</li>
   				</ul>
   				<!-- <div
 					style="margin-top:5px; background-color: #F4FAFF; height: 35px; width: 100%; border-top:1px solid #B8D0D6;line-height: 100%;">
