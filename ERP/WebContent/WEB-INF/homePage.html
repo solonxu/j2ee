@@ -15,7 +15,7 @@ body{
 	margin:0px auto;
 }
 .detail{
-	margin:30px 10px 0px 10px;
+	margin:20px 10px 0px 10px;
 }
 
 table {
@@ -25,6 +25,27 @@ table {
 #table{
 	width:100%;
 	margin:0px;
+}
+.accountInfo {
+    display: block;
+    overflow: hidden;
+    height: 35px;
+    padding: 0 10px;
+    background-color:#F4FAFF;
+    line-height:5px;
+}
+.accountInfo .right {
+    float: right;
+    padding-right: 10px;
+    text-align: right;
+}
+.accountInfo p {
+    /* padding: 8px 0 0 0;
+    line-height: 19px; */
+}
+.accountInfo p span {
+    font-size: 14px;
+    font-weight: bold;
 }
 </style>
 <script type="text/javascript">
@@ -63,7 +84,10 @@ table {
 </script>
 </head>
 <body>
-	
+	<div class="accountInfo">
+		<div id="todayinfo" class="right"><p>2017年12月6日，星期三</p></div>
+		<p><span id="accountinfo">欢迎您：【kit】刘亚容，职务：内务总监，所属部门：【10000】公司</span></p>
+   </div>
 		<div class="detail">
 			<table id="table" class="order-column" >
 				<thead>

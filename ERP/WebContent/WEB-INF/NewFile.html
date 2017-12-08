@@ -149,26 +149,6 @@ a.ui-button:active,
 .nav-tabs li{
 	/* background-color:#f5f8f9; */
 }
-.accountInfo {
-    display: block;
-    overflow: hidden;
-    height: 35px;
-    padding: 0 10px;
-    background-color:#F4FAFF;
-}
-.accountInfo .right {
-    float: right;
-    padding-right: 10px;
-    text-align: right;
-}
-.accountInfo p {
-    padding: 8px 0 0 0;
-    line-height: 19px;
-}
-.accountInfo p span {
-    font-size: 14px;
-    font-weight: bold;
-}
 #menu .ui-state-active .ui-icon, .ui-button:active .ui-icon,
 #menu .ui-state-active .ui-icon, .ui-button:active .ui-icon-circle-arrow-e{
 	background-image: url('./images/folder.png');
@@ -316,7 +296,7 @@ a.ui-button:active,
 		$("iframe").attr("src","./homePage.html");
 		$(".nav.nav-tabs li").removeClass("active");
 		$(".nav.nav-tabs li.myHome").addClass("active");
-		
+		$("#menu li").removeClass("select");
 	}
 </script>
 </head>
@@ -396,10 +376,7 @@ a.ui-button:active,
 					style="margin-top:5px; background-color: #F4FAFF; height: 35px; width: 100%; border-top:1px solid #B8D0D6;line-height: 100%;">
 					欢迎
 				</div> -->
-				<div class="accountInfo">
-					<div id="todayinfo" class="right"><p>2017年12月6日，星期三</p></div>
-					<p><span id="accountinfo">欢迎您：【kit】刘亚容，职务：内务总监，所属部门：【10000】公司</span></p>
-			   </div>
+				
 				<iframe src="./homePage.html">
 				
 				</iframe>

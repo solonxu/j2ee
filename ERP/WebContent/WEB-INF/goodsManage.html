@@ -33,47 +33,95 @@
 	border: 1px solid #cbd1d3;
 	border-radius: 7px;
 }
-#goods_guid_report1_nodata_tr{
-	text-align:center;
-}
-.cls-title{
-	font-weight:bold;
-}
-#goodsManageData{
-	font-size:13px;
-}
-.cls-data-th-list { /*数据自动列表报表数据标题行每个<td/>的样式#3AA8F3/#64A5F8*/
-	/**background-color: #64A5F8;*/
-	/* BACKGROUND-IMAGE: url(./webresources/skin/vista/images/datatitle_bg.gif); */
+
+#goods_guid_report1_nodata_tr {
 	text-align: center;
-	vertical-align: middle;/* 
-	border: 1px solid #C0C0C0; */
 }
 
-.cls-data-td-list { /*数据自动列表报表数据行每个<td/>的样式*/
-	/* border: 1px solid #C0C0C0; */
-	min-height: 23px;
-	height: 23px;
-	padding-top: 0px;
-	padding-bottom: 0px;
+.cls-title {
+	font-weight: bold;
 }
 
-.cls-data-content-list {
-	/*如果cellresize配置为1或者显示了垂直滚动条，则会将单元格内容自动包在一个<div/>中，下面就是设置这个div的样式*/
-	/*white-space:nowrap;*/
-	overflow: hidden;
-	text-overflow: ellipsis;
-	width: 100%
+#goodsManageData {
+	font-size: 13px;
 }
-.cls-data-th-detail{
-	background-color: #EBF0FE;
-	font-size:13px;
+label {
+	font-weight: normal;
+	font-size: 13px;
 }
-label{
-	font-weight:normal;
-	font-size:13px;
+
+#goods_guid_report1_nodata_tr {
+	display: none;
+}
+.modal-dialog{
+	width:100%;
+	height:100%;
+}
+.modal-header{
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#edf5f8), to(#bdc6cd));
+	background-color: #BDC6CF;
+	border-top: 1px solid #edf5f8;
+    border-bottom: 1px solid #b6bec5;
+    height:30px;
+}
+.modal-title,.modal-header button.close{
+	margin-top:-10px;
+}
+.selected{
+	background-color:#acfaf0;
 }
 </style>
+<script type="text/javascript">
+	$(function(){
+		$("#goodsManageData tbody").on("mouseenter", "td", function(){
+			$(this).siblings("td").removeClass( 'highlight' );
+            $(this).siblings("td").addClass('highlight');
+            $(this).removeClass( 'highlight' );
+            $(this).addClass('highlight');
+		});
+		$("#goodsManageData tbody").on('mouseleave', 'td', function () {
+			$(this).siblings("td").removeClass( 'highlight' );
+			$(this).removeClass( 'highlight' );
+		});
+		$("#goodsManageData tbody input[type=checkbox]").on("click", function () {
+			var tdObj = $(this).parent().parent();
+			if(this.checked){
+	            $(tdObj).siblings("td").addClass('selected');
+	            $(tdObj).addClass('selected');
+			}else{
+				$(tdObj).siblings("td").removeClass('selected');
+	            $(tdObj).removeClass('selected');
+			}
+			var theadChecked = false;
+			$("#goodsManageData tbody tr input[type=checkbox]").each(function(index){
+				if(this.checked){
+					theadChecked = true;
+				}else{
+					theadChecked = false;
+					return false;
+				}
+            });
+			$("#goodsManageData thead tr input[type=checkbox]")[0].checked = theadChecked;
+		});
+		$("#goodsManageData thead input[type=checkbox]").on("click", function () {
+			var tdObj = $(this).parent().parent();
+			if(this.checked){
+	            $("#goodsManageData tbody tr input[type=checkbox]").each(function(index){
+	            	this.checked = true;
+	            });
+			}else{
+				$("#goodsManageData tbody tr input[type=checkbox]").each(function(index){
+	            	this.checked = false;
+	            });
+			}
+		});
+	});
+	
+	function editGoods(){
+		var editId = 1;
+		$("#myModal iframe").attr("src","./goodsDetail.html?editId="+editId);
+	}
+</script>
 </head>
 <body marginwidth="0" marginheight="0">
 	<div id="">
@@ -164,26 +212,19 @@ label{
 
 		<div id="">
 			<form method="post" onsubmit="return false" style="margin: 0px">
-				<span class="cls-title">商品资料</span> 
-				<div 
-					style="float:right;"><input type="button"
-					value="隐藏商品" id=""
-					name=""
-					onclick=""><span
-					style="margin-left: 9px;"></span><input type="button"
-					value="取消隐藏商品" id=""
-					name=""
-					onclick=""><span
-					style="margin-left: 9px;"></span><input type="button" value="新增商品"
-					id=""
-					name=""
-					onclick="" /><span
-					style="margin-left: 9px;"></span><input type="button" value="删 除"
-					class="cls-button"><span style="margin-left: 9px;"></span><input type="button"
-					value="导出Excel" class="cls-button2" /></div>
+				<span class="cls-title">商品资料</span>
+				<div style="float: right;">
+					<input type="button" value="隐藏商品" id="" name="" onclick=""><span
+						style="margin-left: 9px;"></span><input type="button"
+						value="取消隐藏商品" id="" name="" onclick=""><span
+						style="margin-left: 9px;"></span><input type="button" value="新增商品"
+						id="" name="" onclick="" /><span style="margin-left: 9px;"></span><input
+						type="button" value="删 除" class="cls-button"><span
+						style="margin-left: 9px;"></span><input type="button"
+						value="导出Excel" class="cls-button2" />
+				</div>
 
-				<table class="cls-data-table" width="100%"
-					id="goodsManageData" >
+				<table class="cls-data-table" width="100%" id="goodsManageData">
 					<thead>
 						<tr class="cls-data-tr-head-list">
 							<td class="cls-data-th-list" width="2%" align="center"
@@ -211,31 +252,164 @@ label{
 						<tr id="goods_guid_report1_nodata_tr" class="">
 							<td class="cls-data-td-editlist" bgcolor="#ffffff" colspan="18">没有数据</td>
 						</tr>
+						<tr id="" class="cls-data-tr-even">
+							<td class="cls-data-td-editlist" align="center" valign="middle"><div
+									 class="cls-data-content-list">
+									<input type="checkbox" 
+										name="" 
+										>
+								</div></td>
+							<td class="cls-data-td-editlist" align="center"><div
+									class="cls-data-content-list">1</div></td>
+							<td><div
+									class="cls-data-content-list">
+									<input type="button" value="编辑" data-toggle="modal" data-target="#myModal"
+										onclick="editGoods();">
+								</div></td>
+							<td id="" ><div
+									class="cls-data-content-list">
+									<span onmouseover="this.style.cursor='pointer'"
+										title="商品索引号148074的库存信息：null">148074</span>
+								</div></td>
+							<td class="cls-data-td-editlist"
+								align="center"><div 
+									class="cls-data-content-list">A08CFC03500003</div></td>
+							<td id=""
+								class="cls-data-td-editlist" align="center"><div
+									class="cls-data-content-list">茶几</div></td>
+							<td id="" ><div 
+									class="cls-data-content-list">黑胡桃</div></td>
+							<td id="" 
+								class="cls-data-td-editlist" align="center"><div
+									class="cls-data-content-list">1372x772x390</div></td>
+							<td id=""
+								class="cls-data-td-editlist" align="center"><div
+									class="cls-data-content-list">~1、法国流金大理石面板；2、木材为黑胡桃实木表面开放清漆处理；3不锈钢底架,表面抛亮光</div></td>
+							<td id=""
+								class="cls-data-td-editlist" align="center"><div
+									class="cls-data-content-list">2950.0</div></td>
+							<td id="" 
+								align="center"><div 
+									class="cls-data-content-list">7640.0</div></td>
+							<td id=""
+								class="cls-data-td-editlist" align="center"><div
+									 class="cls-data-content-list">0.0</div></td>
+							<td id="" 
+								align="center"><div 
+									class="cls-data-content-list">0.61</div></td>
+							<td id=""
+								class="cls-data-td-editlist" align="center"><div
+									class="cls-data-content-list">张</div></td>
+							<td id=""
+								class="cls-data-td-editlist" align="center"><div
+									class="cls-data-content-list">55</div></td>
+							<td id=""
+								class="cls-data-td-editlist" align="center"><div
+									class="cls-data-content-list"></div></td>
+							<td id=""
+								class="cls-data-td-editlist"
+								align="center"><div 
+									class="cls-data-content-list">贺会</div></td>
+							<td id="" 
+								class="cls-data-td-editlist" align="center"><div
+									class="cls-data-content-list">2017-03-30</div></td>
+						</tr>
+						<tr id="goods_guid_report1_nodata_tr" class="">
+							<td class="cls-data-td-editlist" bgcolor="#ffffff" colspan="18">没有数据</td>
+						</tr>
+						<tr id="" class="cls-data-tr-even">
+							<td class="cls-data-td-editlist" align="center" valign="middle"><div
+									 class="cls-data-content-list">
+									<input type="checkbox" 
+										name="" 
+										>
+								</div></td>
+							<td class="cls-data-td-editlist" align="center"><div
+									class="cls-data-content-list">1</div></td>
+							<td><div
+									class="cls-data-content-list">
+									<input type="button" value="编辑" data-toggle="modal" data-target="#myModal"
+										onclick="editGoods();">
+								</div></td>
+							<td id="" ><div
+									class="cls-data-content-list">
+									<span onmouseover="this.style.cursor='pointer'"
+										title="商品索引号148074的库存信息：null">148074</span>
+								</div></td>
+							<td class="cls-data-td-editlist"
+								align="center"><div 
+									class="cls-data-content-list">A08CFC03500003</div></td>
+							<td id=""
+								class="cls-data-td-editlist" align="center"><div
+									class="cls-data-content-list">茶几</div></td>
+							<td id="" ><div 
+									class="cls-data-content-list">黑胡桃</div></td>
+							<td id="" 
+								class="cls-data-td-editlist" align="center"><div
+									class="cls-data-content-list">1372x772x390</div></td>
+							<td id=""
+								class="cls-data-td-editlist" align="center"><div
+									class="cls-data-content-list">~1、法国流金大理石面板；2、木材为黑胡桃实木表面开放清漆处理；3不锈钢底架,表面抛亮光</div></td>
+							<td id=""
+								class="cls-data-td-editlist" align="center"><div
+									class="cls-data-content-list">2950.0</div></td>
+							<td id="" 
+								align="center"><div 
+									class="cls-data-content-list">7640.0</div></td>
+							<td id=""
+								class="cls-data-td-editlist" align="center"><div
+									 class="cls-data-content-list">0.0</div></td>
+							<td id="" 
+								align="center"><div 
+									class="cls-data-content-list">0.61</div></td>
+							<td id=""
+								class="cls-data-td-editlist" align="center"><div
+									class="cls-data-content-list">张</div></td>
+							<td id=""
+								class="cls-data-td-editlist" align="center"><div
+									class="cls-data-content-list">55</div></td>
+							<td id=""
+								class="cls-data-td-editlist" align="center"><div
+									class="cls-data-content-list"></div></td>
+							<td id=""
+								class="cls-data-td-editlist"
+								align="center"><div 
+									class="cls-data-content-list">贺会</div></td>
+							<td id="" 
+								class="cls-data-td-editlist" align="center"><div
+									class="cls-data-content-list">2017-03-30</div></td>
+						</tr>
 					</tbody>
 				</table>
 
 			</form>
 		</div>
 
-		<span id="goods_metadata" style="display: none;" pageid="goods"
-			componentid="goods" refreshcomponentguid="goods"
-			componenttypename="container.page" childcomponentids="report1"></span>
-		</td>
-		<div id="wx_titletree_container" style="display: none;"
-			class="titletree_container">
-			<div id="titletree_container_inner" class="titletree_container_inner">
-				<div id="tree" class="bbit-tree">
-					<div class="bbit-tree-bwrap">
-						<div class="bbit-tree-body" id="wx_titletree_content"></div>
-					</div>
-				</div>
-			</div>
-			<div id="wx_titletree_buttoncontainer"
-				style="padding-top: 3px; padding-bottom: 5px; text-align: center"></div>
-		</div>
-		<div id="LOADING_IMG_ID" class="cls-loading-img"></div>
 	</div>
-	<div
-		style="display: none; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; cursor: move; opacity: 0; background: rgb(255, 255, 255);"></div>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;
+					</button>
+					<h5 class="modal-title" id="myModalLabel">
+						编辑商品
+					</h5>
+				</div>
+				<div class="modal-body">
+					<iframe frameborder="0" allowtransparency="true" style="width: 100%; height: 100%; border: 0px none;">
+					</iframe>
+				</div>
+				<!-- <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+					</button>
+					<button type="button" class="btn btn-primary">
+						提交更改
+					</button>
+				</div> -->
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
 </body>
 </html>
