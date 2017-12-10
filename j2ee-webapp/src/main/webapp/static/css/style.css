@@ -1,0 +1,62 @@
+table{
+	border-collapse: collapse;
+}
+table.dataTable{
+	border-collapse: collapse;
+}
+table td{
+	border:1px solid #C0C0C0;
+}
+table tbody{
+
+}
+table thead{
+	background-color: #DFE6FA;
+	height:20px;
+}
+.highlight{
+	background-color: #ccfaff !important;
+}
+table.dataTable tbody tr td.highlight{
+	background-color: #ccfaff !important;
+}
+.floatLeft{
+	float:left;
+}
+
+.floatRight{
+	float:right;	
+}
+
+.cls-data-th-list { /*数据自动列表报表数据标题行每个<td/>的样式#3AA8F3/#64A5F8*/
+	/**background-color: #64A5F8;*/
+	/* BACKGROUND-IMAGE: url(./webresources/skin/vista/images/datatitle_bg.gif); */
+	text-align: center;
+	vertical-align: middle; /* 
+	border: 1px solid #C0C0C0; */
+}
+
+.cls-data-td-list { /*数据自动列表报表数据行每个<td/>的样式*/
+	/* border: 1px solid #C0C0C0; */
+	min-height: 23px;
+	height: 23px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.cls-data-content-list {
+	/*如果cellresize配置为1或者显示了垂直滚动条，则会将单元格内容自动包在一个<div/>中，下面就是设置这个div的样式*/
+	/*white-space:nowrap;*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%
+}
+
+.cls-data-th-detail {
+	background-color: #EBF0FE;
+	font-size: 13px;
+	text-align:right;
+}
+.cls-data-td-editdetail{
+	text-align:left;
+}
