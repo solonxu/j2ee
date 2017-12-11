@@ -3,7 +3,7 @@
 *.iws
 .idea/
 target/
-/.settings/
-/.classpath
-/.project
-/temp
+.settings/
+.classpath
+.project
+temp/
