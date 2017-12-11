@@ -1,5 +1,9 @@
-
-j2ee-webapp/.classpath
-j2ee-webapp/.classpath
-j2ee-webapp/.project
-j2ee-webapp/.settings/org.eclipse.jdt.core.prefs
+*.iml
+*.ipr
+*.iws
+.idea/
+target/
+.settings/
+.classpath
+.project
+temp/
