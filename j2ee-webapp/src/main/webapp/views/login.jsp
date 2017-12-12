@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page import="org.apache.shiro.web.filter.authc.FormAuthenticationFilter"%>
-  
+
 <jsp:include page="include.jsp"/>
 <!DOCTYPE html>
 <html>
@@ -133,7 +133,7 @@ function choose_bg() {
     			</div>
     			<div class="form-group">
     				<label class="t"></label>
-    				<label for="j_captcha" style="color:red;" id="info"></label> 
+    				<label for="j_captcha" style="color:red;" id="info"> ${message}</label> 
     			</div>
     			<div class="form-group space">
                     <label class="t"></label>　　　
