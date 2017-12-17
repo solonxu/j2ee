@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<script src="./script/jquery.js"></script>
+<script src="./script/jquery-ui.min.js"></script>
+<script src="./script/bootstrap.js"></script>
+<style type="text/css">
+radio {
+	
+}
+.cls-data-td-editlist{
+	text-align:center;
+}
+/*modal*/
+.modal-dialog{
+	width:100%;
+	height:100%;
+}
+.modal-header{
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#edf5f8), to(#bdc6cd));
+	background-color: #BDC6CF;
+	border-top: 1px solid #edf5f8;
+    border-bottom: 1px solid #b6bec5;
+    height:30px;
+}
+.modal-title,.modal-header button.close{
+	margin-top:-10px;
+}
+</style>
+</head>
+<body>
+	<div>
+		<form action="" method="post" class="searchForm" role="form">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<label class="control-label col-lg-5 col-md-5 col-sm-5">登记日期从</label>
+					<div class="col-lg-7 col-md-7 col-sm-7">
+						<input type="date" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<label class="control-label col-lg-5 col-md-5 col-sm-5">至</label>
+					<div class="col-lg-7 col-md-7 col-sm-7">
+						<input type="date" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<label class="control-label col-lg-5 col-md-5 col-sm-5">成交日期从</label>
+					<div class="col-lg-7 col-md-7 col-sm-7">
+						<input type="date" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<label class="control-label col-lg-5 col-md-5 col-sm-5">至</label>
+					<div class="col-lg-7 col-md-7 col-sm-7">
+						<input type="date" class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<label class="control-label col-lg-5 col-md-5 col-sm-5">客户姓名</label>
+					<div class="col-lg-7 col-md-7 col-sm-7">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<label class="control-label col-lg-5 col-md-5 col-sm-5">手机号</label>
+					<div class="col-lg-7 col-md-7 col-sm-7">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<label class="control-label col-lg-5 col-md-5 col-sm-5">邮箱</label>
+					<div class="col-lg-7 col-md-7 col-sm-7">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<label class="control-label col-lg-5 col-md-5 col-sm-5">客户类型</label>
+					<div class="col-lg-7 col-md-7 col-sm-7">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<label class="control-label col-lg-5 col-md-5 col-sm-5">是否成交</label>
+					<div class="col-lg-7 col-md-7 col-sm-7">
+						<select class="form-control">
+							<option>请选择是否成交</option>
+							<option>是</option>
+							<option>否</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<label class="control-label col-lg-5 col-md-5 col-sm-5">身份证号</label>
+					<div class="col-lg-7 col-md-7 col-sm-7">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<label class="control-label col-lg-5 col-md-5 col-sm-5">通讯地址</label>
+					<div class="col-lg-7 col-md-7 col-sm-7">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3" style="text-align: right;">
+					<div class="col-lg-5 col-md-5 col-sm-5"
+						style="min-width: 80px; padding: 0px;">
+						<label>已申请vip</label>
+						<div style="float: right">
+							<input type="radio" name="isVip" class="">
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4"
+						style="min-width: 80px; padding: 0px;">
+						<label>未申请vip</label>
+						<div style="float: right">
+							<input type="radio" name="isVip" class="">
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3"
+						style="font-size: 12px; min-width: 50px; padding: 0px;">
+						<button>查询</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div style="height: 15px;"></div>
+	<div>
+		<form method="post" onsubmit="return false" style="margin: 0px">
+			<span class="cls-title">客户资料管理</span>
+			<div style="float: right;">
+				<input type="button" value="分配客户资源" id="" name="" onclick="">
+				<input type="button" value="查看客户跟进" id="" name="" onclick="">
+				<input type="button" value="新增客户跟进信息" id="" name="" onclick="" />
+				<input type="button" value="添加" class="cls-button">
+				<input type="button" value="导出Excel" class="cls-button2" />
+			</div>
+
+			<table class="cls-data-table" width="100%" id="customerManager">
+				<thead>
+					<tr class="cls-data-tr-head-list">
+						<td class="cls-data-th-list" width="2%" align="center"
+							valign="middle"></td>
+						<td class="cls-data-th-list" width="3%">序号</td>
+						<td class="cls-data-th-list" >编辑</td>
+						<td class="cls-data-th-list" >Vip卡号</td>
+						<td class="cls-data-th-list" >申请标识</td>
+						<td class="cls-data-th-list" >姓名</td>
+						<td class="cls-data-th-list" >性别</td>
+						<td class="cls-data-th-list" >生日</td>
+						<td class="cls-data-th-list" >手机号</td>
+						<td class="cls-data-th-list" >积分</td>
+						<td class="cls-data-th-list" >微信号</td>
+						<td class="cls-data-th-list" >邮箱</td>
+						<td class="cls-data-th-list" >职业</td>
+						<td class="cls-data-th-list" >年龄段</td>
+						<td class="cls-data-th-list" >客户类型</td>
+						<td class="cls-data-th-list" >通讯地址</td>
+						<td class="cls-data-th-list" >户型</td>
+						<td class="cls-data-th-list" >现场描述</td>
+						<td class="cls-data-th-list" >状态标识</td>
+						<td class="cls-data-th-list" >放弃原因</td>
+						<td class="cls-data-th-list" >备注</td>
+						<td class="cls-data-th-list" >所属部门</td>
+						<td class="cls-data-th-list" >登记日期</td>
+						<td class="cls-data-th-list" >录入员</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="cls-data-td-editlist" bgcolor="#ffffff">
+							<input type="radio" name="user" />
+						</td>
+						<td class="cls-data-td-editlist" width="3%">序号</td>
+						<td class="cls-data-td-editlist" ><img src="./images/rowedit.gif" data-toggle="modal" data-target="#myModal" onclick="editCustomer();"></img></td>
+						<td class="cls-data-td-editlist" >Vip卡号</td>
+						<td class="cls-data-td-editlist" >申请标识</td>
+						<td class="cls-data-td-editlist" >姓名</td>
+						<td class="cls-data-td-editlist" >性别</td>
+						<td class="cls-data-td-editlist" >生日</td>
+						<td class="cls-data-td-editlist" >手机号</td>
+						<td class="cls-data-td-editlist" >积分</td>
+						<td class="cls-data-td-editlist" >微信号</td>
+						<td class="cls-data-td-editlist" >邮箱</td>
+						<td class="cls-data-td-editlist" >职业</td>
+						<td class="cls-data-td-editlist" >年龄段</td>
+						<td class="cls-data-td-editlist" >客户类型</td>
+						<td class="cls-data-td-editlist" >通讯地址</td>
+						<td class="cls-data-td-editlist" >户型</td>
+						<td class="cls-data-td-editlist" >现场描述</td>
+						<td class="cls-data-td-editlist" >状态标识</td>
+						<td class="cls-data-td-editlist" >放弃原因</td>
+						<td class="cls-data-td-editlist" >备注</td>
+						<td class="cls-data-td-editlist" >所属部门</td>
+						<td class="cls-data-td-editlist" >登记日期</td>
+						<td class="cls-data-td-editlist" >录入员</td>
+					</tr>
+					<tr>
+						<td class="cls-data-td-editlist" bgcolor="#ffffff">
+							<input type="radio" name="user"/>
+						</td>
+						<td class="cls-data-td-editlist" width="3%">序号</td>
+						<td class="cls-data-td-editlist" ><img src="./images/rowedit.gif" data-toggle="modal" data-target="#myModal" onclick="editCustomer();"></img></td>
+						<td class="cls-data-td-editlist" >Vip卡号</td>
+						<td class="cls-data-td-editlist" >申请标识</td>
+						<td class="cls-data-td-editlist" >姓名</td>
+						<td class="cls-data-td-editlist" >性别</td>
+						<td class="cls-data-td-editlist" >生日</td>
+						<td class="cls-data-td-editlist" >手机号</td>
+						<td class="cls-data-td-editlist" >积分</td>
+						<td class="cls-data-td-editlist" >微信号</td>
+						<td class="cls-data-td-editlist" >邮箱</td>
+						<td class="cls-data-td-editlist" >职业</td>
+						<td class="cls-data-td-editlist" >年龄段</td>
+						<td class="cls-data-td-editlist" >客户类型</td>
+						<td class="cls-data-td-editlist" >通讯地址</td>
+						<td class="cls-data-td-editlist" >户型</td>
+						<td class="cls-data-td-editlist" >现场描述</td>
+						<td class="cls-data-td-editlist" >状态标识</td>
+						<td class="cls-data-td-editlist" >放弃原因</td>
+						<td class="cls-data-td-editlist" >备注</td>
+						<td class="cls-data-td-editlist" >所属部门</td>
+						<td class="cls-data-td-editlist" >登记日期</td>
+						<td class="cls-data-td-editlist" >录入员</td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;
+					</button>
+					<h5 class="modal-title" id="myModalLabel">
+						编辑客户
+					</h5>
+				</div>
+				<div class="modal-body">
+					<iframe frameborder="0" allowtransparency="true" style="width: 100%; height: 100%; border: 0px none;">
+					</iframe>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+</body>
+<script type="text/javascript">
+function editCustomer(){
+	var editId = 1;
+	$("#myModal iframe").attr("src","./customerDetail.html?editId="+editId);
+}
+</script>
+</html>
