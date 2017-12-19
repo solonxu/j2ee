@@ -93,3 +93,18 @@ label {
 	font-weight: normal;
 	font-size: 13px;
 }
+/*modal*/
+.modal-dialog{
+	width:100%;
+	margin:20px 0px 0px 0px;
+}
+.modal-header{
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#edf5f8), to(#bdc6cd));
+	background-color: #BDC6CF;
+	border-top: 1px solid #edf5f8;
+    border-bottom: 1px solid #b6bec5;
+    height:30px;
+}
+.modal-title,.modal-header button.close{
+	margin-top:-10px;
+}

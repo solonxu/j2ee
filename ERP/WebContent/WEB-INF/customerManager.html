@@ -15,24 +15,76 @@ radio {
 .cls-data-td-editlist{
 	text-align:center;
 }
-/*modal*/
-.modal-dialog{
+.customerDetailForm, .detailAddressForm {
+	margin: 10px;
+	font-size:13px;
+}
+
+.customerDetailForm td input,
+.detailAddressForm td input{
+	height:20px;
+	margin:2px 0px;
 	width:100%;
-	height:100%;
 }
-.modal-header{
-	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#edf5f8), to(#bdc6cd));
-	background-color: #BDC6CF;
-	border-top: 1px solid #edf5f8;
-    border-bottom: 1px solid #b6bec5;
-    height:30px;
+.customerDetailForm td,
+.detailAddressForm td{
+	margin:2px;
 }
-.modal-title,.modal-header button.close{
-	margin-top:-10px;
+.customerDetailForm select,
+.detailAddressForm select{
+	padding:0px 0px 3px 0px;
+}
+.detailAddressForm select{
+	margin:2px 0px;
+}
+.customerDetailForm tr,
+.detailAddressForm tr{
+	margin:2px 0px;
+}
+.customerDetailForm .cls-data-th-detail,
+.detailAddressForm .cls-data-th-detail {
+	border:none;
+}
+.customerDetailForm .cls-data-td-editdetail,
+.detailAddressForm .cls-data-td-editdetail{
+	border:none;
+}
+.customerDetailForm table,
+.detailAddressForm table{
+	margin:0px auto;
+}
+#myModal2{
+	z-index:1070;
+	margin:40px auto;
+	width:600px;
+}
+.forModal2{
+	display:none;
 }
 </style>
+<script type="text/javascript">
+function editCustomer(){
+	var editId = 1;
+	$("#myModal1").show();
+	/* $("#myModal1 iframe").attr("src","./customerDetail.html?editId="+editId); */
+}
+$(function(){
+	$("#myModal2").on("show.bs.modal", function(){
+		$(".forModal2").show();
+	});
+	$("#myModal2").on("hidden.bs.modal", function(){
+		$(".forModal2").hide();
+	});
+});
+function saveCustomerDetail(){
+	$("#myModal1").modal('hide');
+}
+function saveDetailAddress(){
+	$("#myModal2").modal('hide');
+}
+</script>
 </head>
-<body>
+<body marginwidth="0" marginheight="0">
 	<div>
 		<form action="" method="post" class="searchForm" role="form">
 			<div class="row">
@@ -181,7 +233,147 @@ radio {
 							<input type="radio" name="user" />
 						</td>
 						<td class="cls-data-td-editlist" width="3%">序号</td>
-						<td class="cls-data-td-editlist" ><img src="./images/rowedit.gif" data-toggle="modal" data-target="#myModal" onclick="editCustomer();"></img></td>
+						<td class="cls-data-td-editlist" ><img src="./images/rowedit.gif" data-toggle="modal" data-target="#myModal1" onclick="editCustomer();"></img></td>
+						<td class="cls-data-td-editlist" >Vip卡号</td>
+						<td class="cls-data-td-editlist" >申请标识</td>
+						<td class="cls-data-td-editlist" >姓名</td>
+						<td class="cls-data-td-editlist" >性别</td>
+						<td class="cls-data-td-editlist" >生日</td>
+						<td class="cls-data-td-editlist" >手机号</td>
+						<td class="cls-data-td-editlist" >积分</td>
+						<td class="cls-data-td-editlist" >微信号</td>
+						<td class="cls-data-td-editlist" >邮箱</td>
+						<td class="cls-data-td-editlist" >职业</td>
+						<td class="cls-data-td-editlist" >年龄段</td>
+						<td class="cls-data-td-editlist" >客户类型</td>
+						<td class="cls-data-td-editlist" >通讯地址</td>
+						<td class="cls-data-td-editlist" >户型</td>
+						<td class="cls-data-td-editlist" >现场描述</td>
+						<td class="cls-data-td-editlist" >状态标识</td>
+						<td class="cls-data-td-editlist" >放弃原因</td>
+						<td class="cls-data-td-editlist" >备注</td>
+						<td class="cls-data-td-editlist" >所属部门</td>
+						<td class="cls-data-td-editlist" >登记日期</td>
+						<td class="cls-data-td-editlist" >录入员</td>
+					</tr>
+					<tr>
+						<td class="cls-data-td-editlist" bgcolor="#ffffff">
+							<input type="radio" name="user" />
+						</td>
+						<td class="cls-data-td-editlist" width="3%">序号</td>
+						<td class="cls-data-td-editlist" ><img src="./images/rowedit.gif" data-toggle="modal" data-target="#myModal1" onclick="editCustomer();"></img></td>
+						<td class="cls-data-td-editlist" >Vip卡号</td>
+						<td class="cls-data-td-editlist" >申请标识</td>
+						<td class="cls-data-td-editlist" >姓名</td>
+						<td class="cls-data-td-editlist" >性别</td>
+						<td class="cls-data-td-editlist" >生日</td>
+						<td class="cls-data-td-editlist" >手机号</td>
+						<td class="cls-data-td-editlist" >积分</td>
+						<td class="cls-data-td-editlist" >微信号</td>
+						<td class="cls-data-td-editlist" >邮箱</td>
+						<td class="cls-data-td-editlist" >职业</td>
+						<td class="cls-data-td-editlist" >年龄段</td>
+						<td class="cls-data-td-editlist" >客户类型</td>
+						<td class="cls-data-td-editlist" >通讯地址</td>
+						<td class="cls-data-td-editlist" >户型</td>
+						<td class="cls-data-td-editlist" >现场描述</td>
+						<td class="cls-data-td-editlist" >状态标识</td>
+						<td class="cls-data-td-editlist" >放弃原因</td>
+						<td class="cls-data-td-editlist" >备注</td>
+						<td class="cls-data-td-editlist" >所属部门</td>
+						<td class="cls-data-td-editlist" >登记日期</td>
+						<td class="cls-data-td-editlist" >录入员</td>
+					</tr>
+					<tr>
+						<td class="cls-data-td-editlist" bgcolor="#ffffff">
+							<input type="radio" name="user" />
+						</td>
+						<td class="cls-data-td-editlist" width="3%">序号</td>
+						<td class="cls-data-td-editlist" ><img src="./images/rowedit.gif" data-toggle="modal" data-target="#myModal1" onclick="editCustomer();"></img></td>
+						<td class="cls-data-td-editlist" >Vip卡号</td>
+						<td class="cls-data-td-editlist" >申请标识</td>
+						<td class="cls-data-td-editlist" >姓名</td>
+						<td class="cls-data-td-editlist" >性别</td>
+						<td class="cls-data-td-editlist" >生日</td>
+						<td class="cls-data-td-editlist" >手机号</td>
+						<td class="cls-data-td-editlist" >积分</td>
+						<td class="cls-data-td-editlist" >微信号</td>
+						<td class="cls-data-td-editlist" >邮箱</td>
+						<td class="cls-data-td-editlist" >职业</td>
+						<td class="cls-data-td-editlist" >年龄段</td>
+						<td class="cls-data-td-editlist" >客户类型</td>
+						<td class="cls-data-td-editlist" >通讯地址</td>
+						<td class="cls-data-td-editlist" >户型</td>
+						<td class="cls-data-td-editlist" >现场描述</td>
+						<td class="cls-data-td-editlist" >状态标识</td>
+						<td class="cls-data-td-editlist" >放弃原因</td>
+						<td class="cls-data-td-editlist" >备注</td>
+						<td class="cls-data-td-editlist" >所属部门</td>
+						<td class="cls-data-td-editlist" >登记日期</td>
+						<td class="cls-data-td-editlist" >录入员</td>
+					</tr>
+					<tr>
+						<td class="cls-data-td-editlist" bgcolor="#ffffff">
+							<input type="radio" name="user" />
+						</td>
+						<td class="cls-data-td-editlist" width="3%">序号</td>
+						<td class="cls-data-td-editlist" ><img src="./images/rowedit.gif" data-toggle="modal" data-target="#myModal1" onclick="editCustomer();"></img></td>
+						<td class="cls-data-td-editlist" >Vip卡号</td>
+						<td class="cls-data-td-editlist" >申请标识</td>
+						<td class="cls-data-td-editlist" >姓名</td>
+						<td class="cls-data-td-editlist" >性别</td>
+						<td class="cls-data-td-editlist" >生日</td>
+						<td class="cls-data-td-editlist" >手机号</td>
+						<td class="cls-data-td-editlist" >积分</td>
+						<td class="cls-data-td-editlist" >微信号</td>
+						<td class="cls-data-td-editlist" >邮箱</td>
+						<td class="cls-data-td-editlist" >职业</td>
+						<td class="cls-data-td-editlist" >年龄段</td>
+						<td class="cls-data-td-editlist" >客户类型</td>
+						<td class="cls-data-td-editlist" >通讯地址</td>
+						<td class="cls-data-td-editlist" >户型</td>
+						<td class="cls-data-td-editlist" >现场描述</td>
+						<td class="cls-data-td-editlist" >状态标识</td>
+						<td class="cls-data-td-editlist" >放弃原因</td>
+						<td class="cls-data-td-editlist" >备注</td>
+						<td class="cls-data-td-editlist" >所属部门</td>
+						<td class="cls-data-td-editlist" >登记日期</td>
+						<td class="cls-data-td-editlist" >录入员</td>
+					</tr>
+					<tr>
+						<td class="cls-data-td-editlist" bgcolor="#ffffff">
+							<input type="radio" name="user" />
+						</td>
+						<td class="cls-data-td-editlist" width="3%">序号</td>
+						<td class="cls-data-td-editlist" ><img src="./images/rowedit.gif" data-toggle="modal" data-target="#myModal1" onclick="editCustomer();"></img></td>
+						<td class="cls-data-td-editlist" >Vip卡号</td>
+						<td class="cls-data-td-editlist" >申请标识</td>
+						<td class="cls-data-td-editlist" >姓名</td>
+						<td class="cls-data-td-editlist" >性别</td>
+						<td class="cls-data-td-editlist" >生日</td>
+						<td class="cls-data-td-editlist" >手机号</td>
+						<td class="cls-data-td-editlist" >积分</td>
+						<td class="cls-data-td-editlist" >微信号</td>
+						<td class="cls-data-td-editlist" >邮箱</td>
+						<td class="cls-data-td-editlist" >职业</td>
+						<td class="cls-data-td-editlist" >年龄段</td>
+						<td class="cls-data-td-editlist" >客户类型</td>
+						<td class="cls-data-td-editlist" >通讯地址</td>
+						<td class="cls-data-td-editlist" >户型</td>
+						<td class="cls-data-td-editlist" >现场描述</td>
+						<td class="cls-data-td-editlist" >状态标识</td>
+						<td class="cls-data-td-editlist" >放弃原因</td>
+						<td class="cls-data-td-editlist" >备注</td>
+						<td class="cls-data-td-editlist" >所属部门</td>
+						<td class="cls-data-td-editlist" >登记日期</td>
+						<td class="cls-data-td-editlist" >录入员</td>
+					</tr>
+					<tr>
+						<td class="cls-data-td-editlist" bgcolor="#ffffff">
+							<input type="radio" name="user" />
+						</td>
+						<td class="cls-data-td-editlist" width="3%">序号</td>
+						<td class="cls-data-td-editlist" ><img src="./images/rowedit.gif" data-toggle="modal" data-target="#myModal1" onclick="editCustomer();"></img></td>
 						<td class="cls-data-td-editlist" >Vip卡号</td>
 						<td class="cls-data-td-editlist" >申请标识</td>
 						<td class="cls-data-td-editlist" >姓名</td>
@@ -209,7 +401,7 @@ radio {
 							<input type="radio" name="user"/>
 						</td>
 						<td class="cls-data-td-editlist" width="3%">序号</td>
-						<td class="cls-data-td-editlist" ><img src="./images/rowedit.gif" data-toggle="modal" data-target="#myModal" onclick="editCustomer();"></img></td>
+						<td class="cls-data-td-editlist" ><img src="./images/rowedit.gif" data-toggle="modal" data-target="#myModal1" onclick="editCustomer();"></img></td>
 						<td class="cls-data-td-editlist" >Vip卡号</td>
 						<td class="cls-data-td-editlist" >申请标识</td>
 						<td class="cls-data-td-editlist" >姓名</td>
@@ -236,7 +428,7 @@ radio {
 			</table>
 		</form>
 	</div>
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal fade	" id="myModal1" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -248,17 +440,216 @@ radio {
 					</h5>
 				</div>
 				<div class="modal-body">
-					<iframe frameborder="0" allowtransparency="true" style="width: 100%; height: 100%; border: 0px none;">
-					</iframe>
+					<!-- <iframe frameborder="0" allowtransparency="true" style="width: 100%; height: 300px; border: 0px none;">
+					</iframe> -->
+					<div style="width: 100%; height: 300px; border: 0px none;">
+		<form method="post" onsubmit="return false" class="customerDetailForm">
+			<div class="floatLeft" style="font-weight: bold;">
+				<span>详细信息</span>
+			</div>
+			<div class="floatRight">
+				<input type="button" value="添加详细地址" data-toggle="modal" data-target="#myModal2"/> 
+				<input type="button" value="保 存" onclick="saveCustomerDetail();"/> 
+				<input type="button" value="重 置" />
+			</div>
+			<table class='cls-data-table-detail'
+				style="table-layout: fixed; border: none;" width="100%">
+				<tr>
+					<td class='cls-data-th-detail' width="120px"><font color="red">*</font>客户姓名：</td>
+					<td class="cls-data-td-editdetail" colspan='1' width="120px">
+						<input type="text" value="123"/>
+					</td>
+					<td class='cls-data-th-detail' width="120px">性别：
+					</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1' width="90%">
+						<font>
+							<select style="width: 95%">
+								<option value='male'>先生</option>
+								<option value='female'>女士</option>
+							</select>
+						</font>
+					</td>
+					<td class='cls-data-th-detail' width="120px">生日：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1' width="90%">
+					<font><input type='date' style="width:120px;"/></font></td>
+				</tr>
+				<tr>
+					<td class='cls-data-th-detail' width="120px"><font color="red">*</font>手机号：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1' width="120px"
+						><font><input type="text" value="13335358094"/></font></td>
+					<td class='cls-data-th-detail' width="120px">微信号：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'>
+					<font><input type="text" value="--"/></font></td>
+					<td class='cls-data-th-detail' width="120px">邮箱：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						><font><input type="text" value="@"/></font></td>
+				</tr>
+				<tr>
+					<td class='cls-data-th-detail' width="120px">职业：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						><font>
+						<select style="width: 95%">
+							<option value='male'>私营主</option>
+							<option value='female'>公务员</option>
+						</select></font></td>
+					<td class='cls-data-th-detail' width="120px">年龄段：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						><font>
+						<select style="width: 95%">
+							<option value='male'>20以下</option>
+							<option value='female'>20-25</option>
+						</select>
+					</font></td>
+					<td class='cls-data-th-detail' width="120px">客户类型：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						>
+						<font>
+							<select style="width: 95%">
+								<option value='male'>精准</option>
+								<option value='female'>非精准</option>
+							</select>
+						</font>
+					</td>
+				</tr>
+				<tr>
+					<td class='cls-data-th-detail' width="120px">vip卡号：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						>
+						<font>
+							<input type="text" value="123456" />
+						</font>
+					</td>
+					<td class='cls-data-th-detail' width="120px">状态标识：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						><font>
+						<select style="width: 95%">
+							<option value='male'>跟进中</option>
+							<option value='female'>已成交</option>
+						</select>
+					</font></td>
+					<td class='cls-data-th-detail' width="120px">放弃原因：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						>
+						<font>
+							<select style="width: 95%">
+								<option value='male'>价格太高</option>
+								<option value='female'>尺寸不符</option>
+							</select>
+						</font>
+					</td>
+				</tr>
+				<tr>
+					<td class='cls-data-th-detail' width="120px">身份证号：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						><font><input type="text" value="610xxxxxxxxxxxxxxx"/></font></td>
+					<td class='cls-data-th-detail' width="120px"><font color="red">*</font>预购金额：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						><font><input type="text" value="0"/></font></td>
+					<td class='cls-data-th-detail' width="120px">户型：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						>
+						<font>
+							<select style="width: 95%">
+								<option value='male'>一室一厅</option>
+								<option value='female'>两室一厅</option>
+							</select>
+						</font></td>
+				</tr>
+				<tr>
+					<td class='cls-data-th-detail' width="120px">通讯地址：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'
+						><font><input type='text' value="广州市越秀区东山区东园新村73号104房" style="width: 65%" /></font></td>
+				</tr>
+				<tr>
+					<td class='cls-data-th-detail' width="120px">现场描述：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'><input type="text"
+							style="width: 65%;"/></td>
+				</tr>
+				<tr>
+					<td class='cls-data-th-detail' width="120px">备注：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'><input type="text"
+							style="width: 65%;" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
 				</div>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal -->
 	</div>
+	<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;
+					</button>
+					<h5 class="modal-title" id="myModalLabel">
+						详细地址
+					</h5>
+				</div>
+				<div class="modal-body">
+					<div>
+						<form method="post" onsubmit="return false" class="detailAddressForm">
+							<div style="height:24px; margin-bottom:10px;">
+								<div class="floatLeft" style="font-weight: bold; line-height:24px;height:100%;">
+									<span>添加详细地址</span>
+								</div>
+								<div class="floatRight">
+									<input type="button" value="保 存" onclick="saveDetailAddress();"/> 
+									<input type="button" value="添加区域" data-toggle="modal" data-target="#addArea" />
+									<input type="button" value="添加路街道" data-toggle="modal" data-target="#addRoadStreet" /> 
+									<input type="button" value="添加楼盘" data-toggle="modal" data-target="#addFloor" />
+									<input type="button" value="重 置" />
+								</div>
+								
+							</div>
+							<table class='cls-data-table-detail'
+								style="table-layout: fixed; border: none;" width="100%">
+								<tr>
+									<td class='cls-data-th-detail' width="120px">城市：</td>
+									<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'
+										><font>
+											<select style="width: 95%">
+												<option value='male'>广州市</option>
+												<option value='female'>佛山</option>
+											</select>
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td class='cls-data-th-detail' width="120px">区域名称：</td>
+									<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'
+										><font>
+											<select style="width: 95%">
+												<option value='male'>白云区</option>
+												<option value='female'>从化区</option>
+											</select>
+										</font></td>
+								</tr>
+								<tr>
+									<td class='cls-data-th-detail' width="120px">路：</td>
+									<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'
+										>
+										<font>
+											<select style="width: 95%">
+												<option value='male'>1</option>
+												<option value='female'>2</option>
+											</select>
+										</font></td>
+								</tr>
+								<tr>
+									<td class='cls-data-th-detail' width="120px">其他信息：</td>
+									<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'
+										><font><input type='text' value="" style="width: 95%" /></font></td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+	<div class="modal-backdrop forModal2 fade in" style="z-index:1060"></div>
 </body>
-<script type="text/javascript">
-function editCustomer(){
-	var editId = 1;
-	$("#myModal iframe").attr("src","./customerDetail.html?editId="+editId);
-}
-</script>
 </html>

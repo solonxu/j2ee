@@ -23,6 +23,10 @@ body{
 td input{
 	height:20px;
 	margin:2px 0px;
+	width:100%;
+}
+td{
+	margin:2px;
 }
 select{
 	padding:0px 0px 3px 0px;
@@ -40,6 +44,18 @@ table{
 	margin:0px auto;
 }
 </style>
+<script type="text/javascript">
+	$(function(){
+		$(".modal-backdrop").css({
+			height:window.outerHeight+45,
+			width:window.outerWidth,
+			z-index:1060
+		});
+		$("myModal2").on("show", function(){
+			alert("xianshi");
+		});
+	});
+</script>
 </head>
 <body>
 	<div>
@@ -48,7 +64,7 @@ table{
 				<span>详细信息</span>
 			</div>
 			<div class="floatRight">
-				<input type="button" value="添 加详细地址" /> 
+				<input type="button" value="添加详细地址" data-toggle="modal" data-target="#myModal2"/> 
 				<input type="button" value="保 存" /> 
 				<input type="button" value="重 置" />
 			</div>
@@ -56,12 +72,12 @@ table{
 				style="table-layout: fixed; border: none;" width="100%">
 				<tr>
 					<td class='cls-data-th-detail' width="120px"><font color="red">*</font>客户姓名：</td>
-					<td class="cls-data-td-editdetail" colspan='1'>
+					<td class="cls-data-td-editdetail" colspan='1' width="120px">
 						<input type="text" value="123"/>
 					</td>
 					<td class='cls-data-th-detail' width="120px">性别：
 					</td>
-					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1' >
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1' width="90%">
 						<font>
 							<select style="width: 95%">
 								<option value='male'>先生</option>
@@ -70,12 +86,12 @@ table{
 						</font>
 					</td>
 					<td class='cls-data-th-detail' width="120px">生日：</td>
-					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1' width="90%">
 					<font><input type='date' style="width:120px;"/></font></td>
 				</tr>
 				<tr>
 					<td class='cls-data-th-detail' width="120px"><font color="red">*</font>手机号：</td>
-					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1' width="120px"
 						><font><input type="text" value="13335358094"/></font></td>
 					<td class='cls-data-th-detail' width="120px">微信号：</td>
 					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'>
@@ -173,5 +189,23 @@ table{
 			</table>
 		</form>
 	</div>
+	<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="myModalLabel" aria-hidden="true" >
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;
+					</button>
+					<h5 class="modal-title" id="myModalLabel">
+						编辑客户
+					</h5>
+				</div>
+				<div class="modal-body" style="">
+					
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+	<div class="modal-backdrop fade in"></div>
 </body>
 </html>
