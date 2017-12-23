@@ -47,16 +47,16 @@ tr{
 		<div id="">
 			<form method="post" onsubmit="return false" class="goodsDetailForm">
 				<div class="floatLeft" style="font-weight:bold;">
-					<span>ååèµæ</span>
+					<span>商品资料</span>
 				</div>
 				<div class="floatRight">
-					<input type="button" value="æ·» å " /> <input type="button"
-						value="ä¿ å­" /> <input type="button" value="é ç½®" />
+					<input type="button" value="添 加" /> <input type="button"
+						value="保 存" /> <input type="button" value="重 置" />
 				</div>
 				<table class='cls-data-table-detail'
 					style="table-layout: fixed; border: none;" width="100%">
 					<tr>
-						<td class='cls-data-th-detail' width="95px" >åå®¶ç¼å·ï¼</td>
+						<td class='cls-data-th-detail' width="95px" >厂家编号：</td>
 						<td class="cls-data-td-editdetail" colspan='1' width='120px'>
 							<font>
 								<select>
@@ -66,50 +66,50 @@ tr{
 								</select>
 							</font>
 						</td>
-						<td class='cls-data-th-detail' width="95px" >ååç¼å·<font
-							color=red>*</font>ï¼
+						<td class='cls-data-th-detail' width="95px" >商品编号<font
+							color=red>*</font>：
 						</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='2'><font><input
 								type='text' value="A08CFC03500003" style="width: 99%" /></font></td>
-						<td class='cls-data-th-detail' width="95px" >åååç§°<font
-							color=red>*</font>ï¼
+						<td class='cls-data-th-detail' width="95px" >商品名称<font
+							color=red>*</font>：
 						</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='2'><font><input
 								type='text' id='goodsEdit_guid_report_wxcol_goodsname'
-								name='goodsEdit_guid_report_wxcol_goodsname' value="è¶å "
+								name='goodsEdit_guid_report_wxcol_goodsname' value="茶几"
 								style="width: 90%" /></font></td>
 					</tr>
 					<tr>
-						<td class='cls-data-th-detail' width="95px" >ååç±»å«ï¼</td>
+						<td class='cls-data-th-detail' width="95px" >商品类别：</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='1' width='120px'><font><select
 								name='goodsEdit_guid_report_wxcol_lb'
 								id='goodsEdit_guid_report_wxcol_lb' style="width: 95%"><option
-										value='A'>é¤å°ãçå³</option>
-									<option value='B'>åºãåºå°¾å³ãåºå¤´æ</option>
-									<option value='C' selected>è¶å </option>
-									<option value='D'>é¤æ¤ãå§æ¤</option>
-									<option value='E'>æè¡£æ¶</option>
-									<option value='M'>é±</option></select></font></td>
-						<td class='cls-data-th-detail' width="95px" >åä½ï¼</td>
+										value='A'>餐台、玄关</option>
+									<option value='B'>床、床尾凳、床头柜</option>
+									<option value='C' selected>茶几</option>
+									<option value='D'>餐椅、吧椅</option>
+									<option value='E'>挂衣架</option>
+									<option value='M'>钱</option></select></font></td>
+						<td class='cls-data-th-detail' width="95px" >单位：</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='1' width='120px'><font><select><option
-										value='1' selected>å¼ </option>
-									<option value='2'>ä¸ª</option>
-									<option value='3'>ä»¶</option>
-									<option value='10'>ç®±</option></select></font></td>
-						<td class='cls-data-th-detail' width="95px" >è´§æï¼éå®ï¼<font
-							color=red>*</font>ï¼
+										value='1' selected>张</option>
+									<option value='2'>个</option>
+									<option value='3'>件</option>
+									<option value='10'>箱</option></select></font></td>
+						<td class='cls-data-th-detail' width="95px" >货期（销售）<font
+							color=red>*</font>：
 						</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='1' width='120px'><font><input
 								type='text' id='goodsEdit_guid_report_wxcol_getdate'
 								name='goodsEdit_guid_report_wxcol_getdate' value="55"
 								style="width: 60%" /></font></td>
-						<td class='cls-data-th-detail' width="95px" >è´§æï¼ä¸å¡ï¼<font
-							color=red>*</font>ï¼
+						<td class='cls-data-th-detail' width="95px" >货期（业务）<font
+							color=red>*</font>：
 						</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='1' width='120px'><font><input
@@ -118,28 +118,28 @@ tr{
 								style="width: 60%" /></font></td>
 					</tr>
 					<tr>
-						<td class='cls-data-th-detail' width="95px" >ééï¼</td>
+						<td class='cls-data-th-detail' width="95px" >重量：</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='1' width='120px'><font><input
 								type='text' id='goodsEdit_guid_report_wxcol_zl'
 								name='goodsEdit_guid_report_wxcol_zl' value="0"
 								style="width: 60%" /></font></td>
-						<td class='cls-data-th-detail' width="95px" >ä½ç§¯ï¼</td>
+						<td class='cls-data-th-detail' width="95px" >体积：</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='1' width='120px'><font><input
 								type='text' id='goodsEdit_guid_report_wxcol_tj'
 								name='goodsEdit_guid_report_wxcol_tj' value="0.0000"
 								style="width: 60%" /></font></td>
-						<td class='cls-data-th-detail' width="95px" >é¢è²<font
-							color=red>*</font>ï¼
+						<td class='cls-data-th-detail' width="95px" >颜色<font
+							color=red>*</font>：
 						</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='1' width='120px'><font><input
 								type='text' id='goodsEdit_guid_report_wxcol_spys'
-								name='goodsEdit_guid_report_wxcol_spys' value="é»è¡æ¡"
+								name='goodsEdit_guid_report_wxcol_spys' value="黑胡桃"
 								style="width: 60%" /></font></td>
-						<td class='cls-data-th-detail' width="95px" >å°ºå¯¸<font
-							color=red>*</font>ï¼
+						<td class='cls-data-th-detail' width="95px" >尺寸<font
+							color=red>*</font>：
 						</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='1' width='120px'><font><input
@@ -148,34 +148,34 @@ tr{
 								style="width: 60%" /></font></td>
 					</tr>
 					<tr>
-						<td class='cls-data-th-detail' width="95px" >ååæè´¨ï¼</td>
+						<td class='cls-data-th-detail' width="95px" >商品材质：</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='7'><font><textarea
 									typename='textareabox'
 									name='goodsEdit_guid_report_wxcol_standard'
 									id='goodsEdit_guid_report_wxcol_standard' style="width: 60%;"
-									rows="4">~1ãæ³å½æµéå¤§çç³é¢æ¿ï¼2ãæ¨æä¸ºé»è¡æ¡å®æ¨è¡¨é¢å¼æ¾æ¸æ¼å¤çï¼3ä¸éé¢åºæ¶,è¡¨é¢æäº®å</textarea></font></td>
+									rows="4">~1、法国流金大理石面板；2、木材为黑胡桃实木表面开放清漆处理；3不锈钢底架,表面抛亮光</textarea></font></td>
 					</tr>
 					<tr>
-						<td class='cls-data-th-detail' width="95px" >è¿ä»·ï¼</td>
+						<td class='cls-data-th-detail' width="95px" >进价：</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='1' width='120px'><font><input
 								type='text' id='goodsEdit_guid_report_wxcol_costprice'
 								name='goodsEdit_guid_report_wxcol_costprice' value="2950.0"
 								style="width: 60%" /></font></td>
-						<td class='cls-data-th-detail' width="95px" >åæ°ï¼</td>
+						<td class='cls-data-th-detail' width="95px" >倍数：</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='1' width='120px'><font><input
 								type='text' id='goodsEdit_guid_report_wxcol_beishu'
 								name='goodsEdit_guid_report_wxcol_beishu' value=""
 								style="width: 60%" /></font></td>
-						<td class='cls-data-th-detail' width="95px" >å®ä»·ï¼</td>
+						<td class='cls-data-th-detail' width="95px" >售价：</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='1' width='120px'><font><input
 								type='text' id='goodsEdit_guid_report_wxcol_price'
 								name='goodsEdit_guid_report_wxcol_price' value="7640.0"
 								style="width: 60%" /></font></td>
-						<td class='cls-data-th-detail' width="95px" >ä¹ä»å®ä»·ï¼</td>
+						<td class='cls-data-th-detail' width="95px" >乐从售价：</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='1' width='120px'><font><input
 								type='text' id='goodsEdit_guid_report_wxcol_newprice'
@@ -183,45 +183,45 @@ tr{
 								style="width: 60%" /></font></td>
 					</tr>
 					<tr>
-						<td class='cls-data-th-detail' width="95px" >æ¯å©ï¼</td>
+						<td class='cls-data-th-detail' width="95px" >毛利：</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='1' width='120px'><font><input
 								type='text' id='goodsEdit_guid_report_wxcol_profit'
 								name='goodsEdit_guid_report_wxcol_profit' value="0.61"
 								style="width: 60%" /></font></td>
-						<td class='cls-data-th-detail' width="95px" >ä»¶æ°ï¼</td>
+						<td class='cls-data-th-detail' width="95px" >件数：</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='1' width='120px'><font><input
 								type='text' id='goodsEdit_guid_report_wxcol_js'
 								name='goodsEdit_guid_report_wxcol_js' value="3"
 								style="width: 60%" /></font></td>
-						<td class='cls-data-th-detail' width="95px" >æ¯å¦éèï¼</td>
+						<td class='cls-data-th-detail' width="95px" >是否隐藏：</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='1' width='120px'><font><span
 								id="">
 								<input type="radio" name="goodsEdit_guid_report_wxcol_outid"
-									id="" label="æ¯" value="1" checked />æ¯
+									id="" label="是" value="1" checked />是
 								<input type="radio" name="goodsEdit_guid_report_wxcol_outid"
-									id="" label="å¦" value="0" />å¦
+									id="" label="否" value="0" />否
 							</span></font></td>
-						<td class='cls-data-th-detail' width="95px" >ååç±»åï¼</td>
+						<td class='cls-data-th-detail' width="95px" >商品类型：</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='1' width='120px'><font><select>
-									<option value='0' selected>ååç±»</option>
-									<option value='1'>æå¡ç±»</option>
+									<option value='0' selected>商品类</option>
+									<option value='1'>服务类</option>
 							</select></font></td>
 					</tr>
 					<tr>
-						<td class='cls-data-th-detail' width="95px" >è®¢è´§è¯¦æï¼</td>
+						<td class='cls-data-th-detail' width="95px" >订货详情：</td>
 						<td class="cls-data-td-editdetail" bgcolor="#ffffff"
 							 colspan='7'><textarea
 									style="width: 60%;" rows="4"></textarea></td>
 					</tr>
 				</table>
 
-				<font color="red">è¯´æï¼</font> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<font color="blue">1ãååç¼å·ï¼ä¿å­åä¼èªå¨å°åå®¶ç¼å·åååç±»å«ä»£ç å å°ååç¼å·ä¸­ï¼</font> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<font color="blue">2ãååç±»åï¼æ¯å¦ååºåçç©ååéååç±»ï¼âæ¬è¿è´¹ç¨âç­ç±»ä¼¼çæ¶è´¹æå¡åéæå¡ç±»ï¼ï¼</font>
+				<font color="red">说明：</font> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<font color="blue">1、商品编号：保存后会自动将厂家编号和商品类别代码加到商品编号中；</font> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<font color="blue">2、商品类型：比如商场卖的物品则选商品类，“搬运费用”等类似的收费服务则选服务类，；</font>
 			</form>
 		</div>
 	</div>

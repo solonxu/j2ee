@@ -254,7 +254,7 @@ label {
 									class="cls-data-content-list">1</div></td>
 							<td><div
 									class="cls-data-content-list">
-									<input type="button" value="编辑" data-toggle="modal" data-target="#myModal"
+									<input type="button" value="编辑" data-toggle="modal" data-target="#myModal1"
 										onclick="editGoods();">
 								</div></td>
 							<td id="" ><div
