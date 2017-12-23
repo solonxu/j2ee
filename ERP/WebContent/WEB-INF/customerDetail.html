@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="./css/jquery-ui.min.css">
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="./css/style.css">
+<script src="./script/jquery.js"></script>
+<script src="./script/jquery-ui.min.js"></script>
+<script src="./script/jquery.dataTables.min.js"></script>
+<script src="./script/bootstrap.js"></script>
+<style type="text/css">
+body{
+	font-size:13px;
+}
+
+.goodsDetailForm {
+	margin: 10px;
+}
+
+td input{
+	height:20px;
+	margin:2px 0px;
+	width:100%;
+}
+td{
+	margin:2px;
+}
+select{
+	padding:0px 0px 3px 0px;
+}
+tr{
+	margin:2px 0px;
+}
+.cls-data-th-detail {
+	border:none;
+}
+.cls-data-td-editdetail{
+	border:none;
+}
+table{
+	margin:0px auto;
+}
+</style>
+<script type="text/javascript">
+	$(function(){
+		$(".modal-backdrop").css({
+			height:window.outerHeight+45,
+			width:window.outerWidth,
+			z-index:1060
+		});
+		$("myModal2").on("show", function(){
+			alert("xianshi");
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<form method="post" onsubmit="return false" class="goodsDetailForm">
+			<div class="floatLeft" style="font-weight: bold;">
+				<span>详细信息</span>
+			</div>
+			<div class="floatRight">
+				<input type="button" value="添加详细地址" data-toggle="modal" data-target="#myModal2"/> 
+				<input type="button" value="保 存" /> 
+				<input type="button" value="重 置" />
+			</div>
+			<table class='cls-data-table-detail'
+				style="table-layout: fixed; border: none;" width="100%">
+				<tr>
+					<td class='cls-data-th-detail' width="120px"><font color="red">*</font>客户姓名：</td>
+					<td class="cls-data-td-editdetail" colspan='1' width="120px">
+						<input type="text" value="123"/>
+					</td>
+					<td class='cls-data-th-detail' width="120px">性别：
+					</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1' width="90%">
+						<font>
+							<select style="width: 95%">
+								<option value='male'>先生</option>
+								<option value='female'>女士</option>
+							</select>
+						</font>
+					</td>
+					<td class='cls-data-th-detail' width="120px">生日：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1' width="90%">
+					<font><input type='date' style="width:120px;"/></font></td>
+				</tr>
+				<tr>
+					<td class='cls-data-th-detail' width="120px"><font color="red">*</font>手机号：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1' width="120px"
+						><font><input type="text" value="13335358094"/></font></td>
+					<td class='cls-data-th-detail' width="120px">微信号：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'>
+					<font><input type="text" value="--"/></font></td>
+					<td class='cls-data-th-detail' width="120px">邮箱：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						><font><input type="text" value="@"/></font></td>
+				</tr>
+				<tr>
+					<td class='cls-data-th-detail' width="120px">职业：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						><font>
+						<select style="width: 95%">
+							<option value='male'>私营主</option>
+							<option value='female'>公务员</option>
+						</select></font></td>
+					<td class='cls-data-th-detail' width="120px">年龄段：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						><font>
+						<select style="width: 95%">
+							<option value='male'>20以下</option>
+							<option value='female'>20-25</option>
+						</select>
+					</font></td>
+					<td class='cls-data-th-detail' width="120px">客户类型：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						>
+						<font>
+							<select style="width: 95%">
+								<option value='male'>精准</option>
+								<option value='female'>非精准</option>
+							</select>
+						</font>
+					</td>
+				</tr>
+				<tr>
+					<td class='cls-data-th-detail' width="120px">vip卡号：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						>
+						<font>
+							<input type="text" value="123456" />
+						</font>
+					</td>
+					<td class='cls-data-th-detail' width="120px">状态标识：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						><font>
+						<select style="width: 95%">
+							<option value='male'>跟进中</option>
+							<option value='female'>已成交</option>
+						</select>
+					</font></td>
+					<td class='cls-data-th-detail' width="120px">放弃原因：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						>
+						<font>
+							<select style="width: 95%">
+								<option value='male'>价格太高</option>
+								<option value='female'>尺寸不符</option>
+							</select>
+						</font>
+					</td>
+				</tr>
+				<tr>
+					<td class='cls-data-th-detail' width="120px">身份证号：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						><font><input type="text" value="610xxxxxxxxxxxxxxx"/></font></td>
+					<td class='cls-data-th-detail' width="120px"><font color="red">*</font>预购金额：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						><font><input type="text" value="0"/></font></td>
+					<td class='cls-data-th-detail' width="120px">户型：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='1'
+						>
+						<font>
+							<select style="width: 95%">
+								<option value='male'>一室一厅</option>
+								<option value='female'>两室一厅</option>
+							</select>
+						</font></td>
+				</tr>
+				<tr>
+					<td class='cls-data-th-detail' width="120px">通讯地址：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'
+						><font><input type='text' value="广州市越秀区东山区东园新村73号104房" style="width: 65%" /></font></td>
+				</tr>
+				<tr>
+					<td class='cls-data-th-detail' width="120px">现场描述：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'><input type="text"
+							style="width: 65%;"/></td>
+				</tr>
+				<tr>
+					<td class='cls-data-th-detail' width="120px">备注：</td>
+					<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'><input type="text"
+							style="width: 65%;" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="myModalLabel" aria-hidden="true" >
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;
+					</button>
+					<h5 class="modal-title" id="myModalLabel">
+						编辑客户
+					</h5>
+				</div>
+				<div class="modal-body" style="">
+					
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+	<div class="modal-backdrop fade in"></div>
+</body>
+</html>
