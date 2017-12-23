@@ -3,7 +3,7 @@
   
 <!--<jsp:include page="include.jsp"/>
 -->
-<%@ include file="include.jsp"%>
+<%@ include file="/views/include.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -327,13 +327,13 @@ a.ui-button:active,
 				//但是没有激活
 				$(".nav.nav-tabs li").removeClass("active");
 				$(".nav.nav-tabs li."+menuIndex).addClass("active");
-				$("iframe").attr("src","./staffContact.html");
-				$("iframe")
+				$("iframe").attr("src","/user/list");
+				
 			}
 		}else{
 			$(".nav.nav-tabs li").removeClass("active");
 			$(".nav.nav-tabs").append('<li class="active staffContact"><a onclick="javascript:goStaffContact(\'staffContact\');">员工信息</a><a onclick="removeTab(\'staffContact\')" class="close">close</a></li>');
-			$("iframe").attr("src","./staffContact.html");
+			$("iframe").attr("src","/user/list");
 		}
 	}
 </script>
