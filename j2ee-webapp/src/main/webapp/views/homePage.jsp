@@ -105,7 +105,7 @@ table {
 					<tr>
 						<td>test</td>
 						<td>
-							<span style="color:#0000FF;cursor:pointer;" onclick="window.open('./showReport.html','查看销售单明细','toolbar=no,location=no,menubar=no')">6800022</span>
+							<span style="color:#0000FF;cursor:pointer;" onclick="window.open('./showReport.jsp','查看销售单明细','toolbar=no,location=no,menubar=no')">6800022</span>
 						</td>
 						<td>test</td>
 					</tr>
