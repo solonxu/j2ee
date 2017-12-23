@@ -28,7 +28,7 @@ table.dataTable tbody tr td.highlight{
 	float:right;	
 }
 
-.cls-data-th-list { /*Êı¾İ×Ô¶¯ÁĞ±í±¨±íÊı¾İ±êÌâĞĞÃ¿¸ö<td/>µÄÑùÊ½#3AA8F3/#64A5F8*/
+.cls-data-th-list { /*æ•°æ®è‡ªåŠ¨åˆ—è¡¨æŠ¥è¡¨æ•°æ®æ ‡é¢˜è¡Œæ¯ä¸ª<td/>çš„æ ·å¼#3AA8F3/#64A5F8*/
 	/**background-color: #64A5F8;*/
 	/* BACKGROUND-IMAGE: url(./webresources/skin/vista/images/datatitle_bg.gif); */
 	text-align: center;
@@ -36,7 +36,7 @@ table.dataTable tbody tr td.highlight{
 	border: 1px solid #C0C0C0; */
 }
 
-.cls-data-td-list { /*Êı¾İ×Ô¶¯ÁĞ±í±¨±íÊı¾İĞĞÃ¿¸ö<td/>µÄÑùÊ½*/
+.cls-data-td-list { /*æ•°æ®è‡ªåŠ¨åˆ—è¡¨æŠ¥è¡¨æ•°æ®è¡Œæ¯ä¸ª<td/>çš„æ ·å¼*/
 	/* border: 1px solid #C0C0C0; */
 	min-height: 23px;
 	height: 23px;
@@ -45,7 +45,7 @@ table.dataTable tbody tr td.highlight{
 }
 
 .cls-data-content-list {
-	/*Èç¹ûcellresizeÅäÖÃÎª1»òÕßÏÔÊ¾ÁË´¹Ö±¹ö¶¯Ìõ£¬Ôò»á½«µ¥Ôª¸ñÄÚÈİ×Ô¶¯°üÔÚÒ»¸ö<div/>ÖĞ£¬ÏÂÃæ¾ÍÊÇÉèÖÃÕâ¸ödivµÄÑùÊ½*/
+	/*å¦‚æœcellresizeé…ç½®ä¸º1æˆ–è€…æ˜¾ç¤ºäº†å‚ç›´æ»šåŠ¨æ¡ï¼Œåˆ™ä¼šå°†å•å…ƒæ ¼å†…å®¹è‡ªåŠ¨åŒ…åœ¨ä¸€ä¸ª<div/>ä¸­ï¼Œä¸‹é¢å°±æ˜¯è®¾ç½®è¿™ä¸ªdivçš„æ ·å¼*/
 	/*white-space:nowrap;*/
 	overflow: hidden;
 	text-overflow: ellipsis;

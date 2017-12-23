@@ -31,6 +31,8 @@ public class ShiroController {
 	    public String loginForm(Model model){
 	        model.addAttribute("user", new User());
 	        System.out.println("I am here");
+	        Subject currentUser = SecurityUtils.getSubject();  
+		     if (currentUser != null)   currentUser.logout();
 	        return "login";
 	    }
 

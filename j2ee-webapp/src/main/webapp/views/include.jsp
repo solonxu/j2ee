@@ -11,10 +11,12 @@
   ~ distributed under the License is distributed on an "AS IS" BASIS,
   ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
+  ~ limitations  under the License.
   --%>
 <%-- General purpose JSP includes, useful on other pages.  This allows us to
      consolidate these entries in one place instead of having to manually
      repeat them on every page. --%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
+
+<c:set var="ctxStatic" value="${pageContext.request.contextPath}/static"/>
