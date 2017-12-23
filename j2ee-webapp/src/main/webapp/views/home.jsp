@@ -291,25 +291,6 @@ a.ui-button:active,
 		$(".nav.nav-tabs li").removeClass("active");
 		$(".nav.nav-tabs li.myHome").addClass("active");
 	}
-	function goGoodsManage(menuIndex){
-		//更新菜单的select状态
-		$("#menu li").removeClass("select");
-		$("#menu li."+menuIndex+"").addClass("select");
-		var exist = $(".nav.nav-tabs li").hasClass("goodsManage");
-		if(!!exist){
-			//这个标签已经存在
-			if(!$(".nav.nav-tabs li.goodsManage").hasClass("active")){
-				//但是没有激活
-				$(".nav.nav-tabs li").removeClass("active");
-				$(".nav.nav-tabs li.goodsManage").addClass("active");
-				$("iframe").attr("src","/goods/list");
-			}
-		}else{
-			$(".nav.nav-tabs li").removeClass("active");
-			$(".nav.nav-tabs").append('<li class="active goodsManage"><a onclick="javascript:goGoodsManage(\'goodsManage\');">商品资料</a><a onclick="removeTab(\'goodsManage\')" class="close">close</a></li>');
-			$("iframe").attr("src","/goods/list");
-		}
-	}
 	function removeTab(menuIndex){
 		$(".nav li."+menuIndex+"").remove();
 		$("iframe").attr("src","./homePage.jsp");
@@ -317,7 +298,25 @@ a.ui-button:active,
 		$(".nav.nav-tabs li.myHome").addClass("active");
 		$("#menu li").removeClass("select");
 	}
-	function goStaffContact(menuIndex){
+	function addTab(menuIndex){
+		var url = "";
+		var displayName = "";
+		if(menuIndex == "spareInfor"){
+			url = "./homePage.html";
+			displayName = "Home";
+		}else if(menuIndex == "goodsManage"){
+			url = "/goods/list";
+			displayName = "商品资料管理";
+		}else if(menuIndex == "staffContact"){
+			url = "/user/list";
+			displayName = "员工通讯录";
+		}else if(menuIndex == "customerManager"){
+			url = "./customerManager.html";
+			displayName = "客户资料管理";
+		}else if(menuIndex == "customerClerk"){
+			url = "./customerClerk.html";
+			displayName = "客户资料管理";
+		}
 		$("#menu li").removeClass("select");
 		$("#menu li."+menuIndex+"").addClass("select");
 		var exist = $(".nav.nav-tabs li").hasClass(menuIndex);
@@ -327,13 +326,12 @@ a.ui-button:active,
 				//但是没有激活
 				$(".nav.nav-tabs li").removeClass("active");
 				$(".nav.nav-tabs li."+menuIndex).addClass("active");
-				$("iframe").attr("src","/user/list");
-				
+				$("iframe").attr("src", url);
 			}
 		}else{
 			$(".nav.nav-tabs li").removeClass("active");
-			$(".nav.nav-tabs").append('<li class="active staffContact"><a onclick="javascript:goStaffContact(\'staffContact\');">员工信息</a><a onclick="removeTab(\'staffContact\')" class="close">close</a></li>');
-			$("iframe").attr("src","/user/list");
+			$(".nav.nav-tabs").append('<li class="active '+menuIndex+'"><a onclick="javascript:addTab(\''+menuIndex+'\');">'+displayName+'</a><a onclick="removeTab(\''+menuIndex+'\')" class="close">close</a></li>');
+			$("iframe").attr("src", url);
 		}
 	}
 </script>
@@ -372,24 +370,29 @@ a.ui-button:active,
 					<div>
 						<ul>
 							<li class="spareInfor"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:goHome('spareInfor');">库存资料</a></li>
-							<li class="goodsManage"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:goGoodsManage('goodsManage');">商品资料管理</a></li>
-							<li class="staffContact"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:goStaffContact('staffContact');">员工通讯录</a></li>
+							<li class="goodsManage"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('goodsManage');">商品资料管理</a></li>
+							<li class="staffContact"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('staffContact');">员工通讯录</a></li>
 						</ul>
 					</div>
 					<h3>客服管理</h3>
 					<div>
 						<ul>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>2</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>3</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>4</a></li>
+							<li class="customerManager"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('customerManager');">客户资料管理【店长】</a></li>
+							<li class="customerClerk"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('customerClerk');">客户资料管理【店员】</a></li>
 						</ul>
 					</div>
 					<h3>商场管理</h3>
 					<div>
 						<ul>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>2</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>3</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>4</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>开销售单</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>销售单查询【店长】</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>销售查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>收款查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>调拨查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>出仓查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>销售货品查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>发票查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>销售员业绩统计</a></li>
 						</ul>
 					</div>
 				</div>
