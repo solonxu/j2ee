@@ -1,7 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page import="org.apache.shiro.web.filter.authc.FormAuthenticationFilter"%>
   
-<jsp:include page="include.jsp"/>
+<!--<jsp:include page="include.jsp"/>
+-->
+<%@ include file="include.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -300,12 +302,12 @@ a.ui-button:active,
 				//但是没有激活
 				$(".nav.nav-tabs li").removeClass("active");
 				$(".nav.nav-tabs li.goodsManage").addClass("active");
-				$("iframe").attr("src","./goodsManage.html");
+				$("iframe").attr("src","/goods/list");
 			}
 		}else{
 			$(".nav.nav-tabs li").removeClass("active");
 			$(".nav.nav-tabs").append('<li class="active goodsManage"><a onclick="javascript:goGoodsManage(\'goodsManage\');">商品资料</a><a onclick="removeTab(\'goodsManage\')" class="close">close</a></li>');
-			$("iframe").attr("src","./goodsManage.html");
+			$("iframe").attr("src","/goods/list");
 		}
 	}
 	function removeTab(menuIndex){
@@ -326,6 +328,7 @@ a.ui-button:active,
 				$(".nav.nav-tabs li").removeClass("active");
 				$(".nav.nav-tabs li."+menuIndex).addClass("active");
 				$("iframe").attr("src","./staffContact.html");
+				$("iframe")
 			}
 		}else{
 			$(".nav.nav-tabs li").removeClass("active");

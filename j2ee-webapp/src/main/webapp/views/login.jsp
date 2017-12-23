@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page import="org.apache.shiro.web.filter.authc.FormAuthenticationFilter"%>
 
-<jsp:include page="include.jsp"/>
+<%@ include file="include.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
