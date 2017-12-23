@@ -287,7 +287,7 @@ a.ui-button:active,
 		});
 	});
 	function goHome(menuIndex){
-		$("iframe").attr("src","./homePage.jsp");
+		$("iframe").attr("src","./views/homePage.jsp");
 		$(".nav.nav-tabs li").removeClass("active");
 		$(".nav.nav-tabs li.myHome").addClass("active");
 	}
