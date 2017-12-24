@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="stylesheet" type="text/css" href="./css/jstree.css">
+
+<script type="text/javascript" src="./script/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="./script/jquery.dataTables.js"></script>
+<script type="text/javascript" src="./script/jquery-ui.min.js"></script>
+<script type="text/javascript" src="./script/jstree.js"></script>
+<script type="text/javascript" src="./script/jstree.checkbox.js"></script>
+<script type="text/javascript" src="./script/bootstrap.js"></script>
+<style type="text/css">
+.cls-data-td-editlist{
+	text-align:center;
+}
+.editForm{
+	font-size:13px;
+}
+.editForm td input{
+	height:20px;
+	margin:2px 0px;
+	width:100%;
+}
+.editForm td{
+	margin:2px;
+}
+.editForm select{
+	margin:2px 0px;
+}
+.editForm tr{
+	margin:2px 0px;
+}
+.editForm .cls-data-th-detail{
+	border:none;
+}
+.editForm .cls-data-td-editdetail{
+	border:none;
+}
+.editForm table{
+	margin:0px auto;
+}
+.modal{
+	width:500px;/*需要自己定义，默认如果不定义的话，是100%*/
+	margin:0px auto;
+}
+.forModalMask{
+	display:none;
+}
+</style>
+<script type="text/javascript">
+$(function() {
+	$("#editModal").on("hidden.bs.modal" , function(){
+		$(".forModalMask").hide();
+	});
+	$("#editModal").on("show.bs.modal" , function(){
+		$(".forModalMask").show();
+	});
+});
+</script>
+</head>
+<body>
+<button data-toggle="modal" data-target="#editModal">编辑</button><!-- #editModal 对应下面的id -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;
+					</button>
+					<h5 class="modal-title" id="myModalLabel">
+						新增楼盘
+					</h5>
+				</div>
+				<div class="modal-body">
+					<div style="width: 100%; height: 130px; border: 0px none;">
+						<form method="post" onsubmit="return false" class="editForm">
+							<div style="height:24px; margin-bottom:10px;">
+								<div class="floatLeft" style="font-weight: bold; line-height:24px;height:100%;">
+									<span>详细信息</span>
+								</div>
+								<div class="floatRight">
+									<input type="button" value="保 存" onclick="saveAddFloor();"/> 
+									<input type="button" value="取 消" onclick="cancelAddFloor();"/> 
+									<input type="button" value="重 置" />
+								</div>
+							</div>
+							<table class='cls-data-table-detail'
+								style="table-layout: fixed; border: none;" width="100%">
+								<tr>
+									<td class='cls-data-th-detail' width="120px">城市：
+									</td>
+									<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7' width="90%">
+										<font>
+											<select style="width: 95%">
+												<option value='male'>广州市</option>
+												<option value='female'>佛山</option>
+											</select>
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td class='cls-data-th-detail' width="120px">区域名称：</td>
+									<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'>
+										<font>
+											<select style="width: 95%">
+												<option value='male'>白云区</option>
+												<option value='female'>天河区</option>
+											</select>
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td class='cls-data-th-detail' width="120px">路：</td>
+									<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'>
+										<font>
+											<select style="width: 95%">
+												<option value='male'>路1</option>
+												<option value='female'>路2</option>
+											</select>
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td class='cls-data-th-detail' width="120px">楼盘：</td>
+									<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'>
+										<font>
+											<input type="text" value="" style="width:95%"/>
+										</font>
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+	<div class="modal-backdrop fade forModalMask in"></div>
+</body>
+</html>
