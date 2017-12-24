@@ -298,25 +298,7 @@ a.ui-button:active,
 		$(".nav.nav-tabs li.myHome").addClass("active");
 		$("#menu li").removeClass("select");
 	}
-	function addTab(menuIndex){
-		var url = "";
-		var displayName = "";
-		if(menuIndex == "spareInfor"){
-			url = "./homePage.html";
-			displayName = "Home";
-		}else if(menuIndex == "goodsManage"){
-			url = "/goods/list";
-			displayName = "商品资料管理";
-		}else if(menuIndex == "staffContact"){
-			url = "/user/list";
-			displayName = "员工通讯录";
-		}else if(menuIndex == "customerManager"){
-			url = "./customerManager.html";
-			displayName = "客户资料管理";
-		}else if(menuIndex == "customerClerk"){
-			url = "./customerClerk.html";
-			displayName = "客户资料管理";
-		}
+	function addTab(menuIndex,url,displayName){
 		$("#menu li").removeClass("select");
 		$("#menu li."+menuIndex+"").addClass("select");
 		var exist = $(".nav.nav-tabs li").hasClass(menuIndex);
@@ -369,16 +351,18 @@ a.ui-button:active,
 					<h3>基本信息</h3>
 					<div>
 						<ul>
-							<li class="spareInfor"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:goHome('spareInfor');">库存资料</a></li>
-							<li class="goodsManage"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('goodsManage');">商品资料管理</a></li>
-							<li class="staffContact"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('staffContact');">员工通讯录</a></li>
+							<li class="spareInfor"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:goHome('spareInfor','homePage.html','库存资料');">库存资料</a></li>
+							<li class="goodsManage"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('goodsManage','/goods/list','商品资料管理');">商品资料管理</a></li>
+							<li class="staffContact"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('staffContact','/user/list','员工通讯录');">员工通讯录</a></li>
+						    <li class="vendor"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('vendor','/vendor/list','厂家资料');">厂家资料</a></li>
+				
 						</ul>
 					</div>
 					<h3>客服管理</h3>
 					<div>
 						<ul>
-							<li class="customerManager"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('customerManager');">客户资料管理【店长】</a></li>
-							<li class="customerClerk"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('customerClerk');">客户资料管理【店员】</a></li>
+							<li class="customerManager"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('customerManager','./customerManager.html','客户资料管理');">客户资料管理【店长】</a></li>
+							<li class="customerClerk"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('customerClerk','./customerClerk.html','客户资料管理');">客户资料管理【店员】</a></li>
 						</ul>
 					</div>
 					<h3>商场管理</h3>
