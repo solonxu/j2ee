@@ -312,7 +312,7 @@ a.ui-button:active,
 			}
 		}else{
 			$(".nav.nav-tabs li").removeClass("active");
-			$(".nav.nav-tabs").append('<li class="active '+menuIndex+'"><a onclick="javascript:addTab(\''+menuIndex+'\');">'+displayName+'</a><a onclick="removeTab(\''+menuIndex+'\')" class="close">close</a></li>');
+			$(".nav.nav-tabs").append('<li class="active '+menuIndex+'"><a onclick="javascript:addTab(\''+menuIndex+'\', \''+url+'\', \''+displayName+'\');">'+displayName+'</a><a onclick="removeTab(\''+menuIndex+'\')" class="close">close</a></li>');
 			$("iframe").attr("src", url);
 		}
 	}

@@ -266,7 +266,7 @@ h3 {
 					<td name="position" width="8%">职位</td>
 					<td name="dept" width="10%">部门 <input
 						type="button"
-						style="width: 16px; height: 17px; background-color: transparent; border: 0px; vertical-align: middle; background-image: url(./images/filter1.jpg); cursor: pointer;" />
+						style="width: 16px; height: 17px; background-color: transparent; border: 0px; vertical-align: middle; background-image: url(${ctxStatic}/images/filter1.jpg); cursor: pointer;" />
 					</td>
 					<td name="status" width="8%">状态</td>
 					<td name="phone" width="9%">联系电话</td>
@@ -274,7 +274,7 @@ h3 {
 					<td name="hireDate" width="10%">入职日期</td>
 					<td name="remark" width="8%">备注<input class="displayTree"
 						type="button" onclick="createTree(this);"
-						style="width: 19px; height: 13px; background-color: transparent; border: 0px; vertical-align: top; background-image: url(./images/selectcols.gif); cursor: pointer;" />
+						style="width: 19px; height: 13px; background-color: transparent; border: 0px; vertical-align: top; background-image: url(${ctxStatic}/images/selectcols.gif); cursor: pointer;" />
 					</td>
 				</tr>
 			</thead>
