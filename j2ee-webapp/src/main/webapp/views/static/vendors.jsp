@@ -100,6 +100,42 @@ h3 {
 .displayTree{
 	margin-left:5px;
 }
+.cls-data-td-editlist{
+	text-align:center;
+}
+.editVendorForm{
+	font-size:13px;
+}
+.editVendorForm td input{
+	height:20px;
+	margin:2px 0px;
+	width:100%;
+}
+.editVendorForm td{
+	margin:2px;
+}
+.editVendorForm select{
+	margin:2px 0px;
+}
+.editVendorForm tr{
+	margin:2px 0px;
+}
+.editVendorForm .cls-data-th-detail{
+	border:none;
+}
+.editVendorForm .cls-data-td-editdetail{
+	border:none;
+}
+.editVendorForm table{
+	margin:0px auto;
+}
+.modal{
+	width:500px;
+	margin:0px auto;
+}
+.forEditVendor{
+	display:none;
+}
 </style>
 <script type="text/javascript">
 	var table = null;
@@ -110,6 +146,8 @@ h3 {
 	
     function editVendor(vendorId) {
     	alert("should popup window to edit id:" + vendorId);
+    	$(".forEditVendor").show();
+    	$("#editVendor").modal('show');
     }
 
 	$(function() {
@@ -123,7 +161,7 @@ h3 {
 			            {"data" : "brand"},
 			            {"data" : null,
 			             render : function (data,type,row) {
-			            	 return "<a><href=\"#\" onclick='editVendor(\"" + row.vendorId+"\");'>Edit</a>";
+			            	 return "<a><href=\"#editVendor\" onclick='editVendor(\"" + row.vendorId+"\");'>Edit</a>";
 			             }	      
 			            }
 			           ],
@@ -141,6 +179,9 @@ h3 {
 		    searching:true,
 		    order : [[1,"asc"]],
 		     "dom" :"<<t>ip>"
+		});
+		$("#editVendor").on("hidden.bs.modal" , function(){
+			$(".forEditVendor").hide();
 		});
 	});
 	
@@ -213,5 +254,106 @@ h3 {
 			</thead>
 		</table>
 	</div>
+	<div class="modal fade" id="editVendor" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;
+					</button>
+					<h5 class="modal-title" id="myModalLabel">
+						编辑厂家资料
+					</h5>
+				</div>
+				<div class="modal-body">
+					<div style="height: 230px; border: 0px none;">
+						<form method="post" onsubmit="return false" class="editVendorForm">
+							<div style="height:24px; margin-bottom:10px;">
+								<div class="floatLeft" style="font-weight: bold; line-height:24px;height:100%;">
+									<span>厂家资料</span>
+								</div>
+								<div class="floatRight">
+									<input type="button" value="保 存" onclick="saveVendor();"/> 
+									<input type="button" value="重 置" />
+								</div>
+							</div>
+							<table class='cls-data-table-detail'
+								style="table-layout: fixed; border: none;" width="100%">
+								<tr>
+									<td class='cls-data-th-detail' width="120px"><font color="red">*</font>厂家编号：
+									</td>
+									<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7' width="90%">
+										<font>
+											<input type="text" value="B19" />
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td class='cls-data-th-detail' width="120px">联系人：</td>
+									<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'>
+										<font>
+											<input type="text" value="B19" />
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td class='cls-data-th-detail' width="120px">简称：</td>
+									<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'>
+										<font>
+											<input type="text" value="B19" />
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td class='cls-data-th-detail' width="120px">电话：</td>
+									<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'>
+										<font>
+											<input type="text" value="B19" />
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td class='cls-data-th-detail' width="120px">厂家全称：</td>
+									<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'>
+										<font>
+											<input type="text" value="B19" />
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td class='cls-data-th-detail' width="120px">传真：</td>
+									<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'>
+										<font>
+											<input type="text" value="B19" />
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td class='cls-data-th-detail' width="120px">产地：</td>
+									<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'>
+										<font>
+											<input type="text" value="B19" />
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td class='cls-data-th-detail' width="120px">品牌：</td>
+									<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'>
+										<font>
+											<select style="width: 95%">
+												<option value='male'>路1</option>
+												<option value='female'>路2</option>
+											</select>
+										</font>
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+	<div class="modal-backdrop fade forEditVendor in"></div>
 </body>
 </html>
