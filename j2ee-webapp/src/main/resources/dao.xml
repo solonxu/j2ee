@@ -9,7 +9,12 @@
     <import resource="db-configuration.xml"/>	
 	<bean id="userDao" class="org.pu.erp.web.dao.impl.JdbcUserDao" >
         <property name="dataSource" ref="dataSource"/>
-        </bean>
+    </bean>
+	
+	
+	<bean id="vendorDao" class="org.pu.erp.web.dao.impl.JdbcVendorDao" >
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
 	
 	
 	
