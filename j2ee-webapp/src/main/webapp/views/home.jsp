@@ -163,12 +163,12 @@ a.ui-button:active,
 #menu .ui-state-active .ui-icon, .ui-button:active .ui-icon,
 #menu .ui-state-active .ui-icon, .ui-button:active .ui-icon-circle-arrow-e{
 	background-image: url('./static/images/folder.png');
-	background-position: center;
+	background-position: 0px -155px;
 }
 #menu .ui-icon, .ui-widget-content .ui-icon,
 #menu .ui-icon, .ui-widget-content .ui-icon-circle-arrow-s{
 	background-image: url('./static/images/folder.png');
-	background-position: center;
+	background-position: 0px -155px;
 }
 #top a{
 	color:#b9ccda;

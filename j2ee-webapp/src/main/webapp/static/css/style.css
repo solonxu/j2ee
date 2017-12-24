@@ -120,3 +120,7 @@ label {
 .modal-title,.modal-header button.close{
 	margin-top:-10px;
 }
+
+a{
+	cursor: pointer;
+}
