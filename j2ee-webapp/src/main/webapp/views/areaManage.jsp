@@ -5,14 +5,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="${ctxStatic}/css/jquery-ui.min.css">
-<link rel="stylesheet" href="${ctxStatic}/css/jquery.dataTables.min.css">
-<link rel="stylesheet" href="${ctxStatic}/css/bootstrap.min.css">
-<link rel="stylesheet" href="${ctxStatic}/css/style.css">
-<script src="${ctxStatic}/js/jquery.js"></script>
-<script src="${ctxStatic}/js/jquery-ui.min.js"></script>
-<script src="${ctxStatic}/js/jquery.dataTables.min.js"></script>
-<script src="${ctxStatic}/js/bootstrap.js"></script>
+<link rel="stylesheet" href="/static/css/jquery-ui.min.css">
+<link rel="stylesheet" href="/static/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/css/style.css">
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/jquery-ui.min.js"></script>
+<script src="/static/js/jquery.dataTables.min.js"></script>
+<script src="/static/js/bootstrap.js"></script>
 <style type="text/css">
 .detail .dataTable td{
 	text-align:center;
@@ -107,10 +107,10 @@ img{
 				</thead>
 				<tbody>
 					<tr>
-						<td>1</td><td>广州市</td><td>白云区</td><td><img src="./images/rowedit.gif" data-toggle="modal" data-target="#addArea" /></td>
+						<td>1</td><td>广州市</td><td>白云区</td><td><img src="/static/images/rowedit.gif" data-toggle="modal" data-target="#addArea" /></td>
 					</tr>
 					<tr>
-						<td>1</td><td>广州市</td><td>白云区</td><td><img src="./images/rowedit.gif" data-toggle="modal" data-target="#addArea" /></td>
+						<td>1</td><td>广州市</td><td>白云区</td><td><img src="/static/images/rowedit.gif" data-toggle="modal" data-target="#addArea" /></td>
 					</tr>
 				</tbody>
 			</table>
