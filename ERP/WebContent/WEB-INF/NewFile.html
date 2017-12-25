@@ -278,32 +278,13 @@ a.ui-button:active,
 		});
 		$(".changeCityContent").mouseover(function(){
 			$(this).show();
-		})
+		});
 	});
 	function goHome(menuIndex){
 		$("iframe").attr("src","./homePage.html");
 		$(".nav.nav-tabs li").removeClass("active");
 		$(".nav.nav-tabs li.myHome").addClass("active");
 	}
-	/* function goGoodsManage(menuIndex){
-		//更新菜单的select状态
-		$("#menu li").removeClass("select");
-		$("#menu li."+menuIndex+"").addClass("select");
-		var exist = $(".nav.nav-tabs li").hasClass("goodsManage");
-		if(!!exist){
-			//这个标签已经存在
-			if(!$(".nav.nav-tabs li.goodsManage").hasClass("active")){
-				//但是没有激活
-				$(".nav.nav-tabs li").removeClass("active");
-				$(".nav.nav-tabs li.goodsManage").addClass("active");
-				$("iframe").attr("src","./goodsManage.html");
-			}
-		}else{
-			$(".nav.nav-tabs li").removeClass("active");
-			$(".nav.nav-tabs").append('<li class="active goodsManage"><a onclick="javascript:goGoodsManage(\'goodsManage\');">商品资料</a><a onclick="removeTab(\'goodsManage\')" class="close">close</a></li>');
-			$("iframe").attr("src","./goodsManage.html");
-		}
-	} */
 	function removeTab(menuIndex){
 		$(".nav li."+menuIndex+"").remove();
 		$("iframe").attr("src","./homePage.html");
@@ -311,24 +292,6 @@ a.ui-button:active,
 		$(".nav.nav-tabs li.myHome").addClass("active");
 		$("#menu li").removeClass("select");
 	}
-	/* function goStaffContact(menuIndex){
-		$("#menu li").removeClass("select");
-		$("#menu li."+menuIndex+"").addClass("select");
-		var exist = $(".nav.nav-tabs li").hasClass(menuIndex);
-		if(!!exist){
-			//这个标签已经存在
-			if(!$(".nav.nav-tabs li."+menuIndex).hasClass("active")){
-				//但是没有激活
-				$(".nav.nav-tabs li").removeClass("active");
-				$(".nav.nav-tabs li."+menuIndex).addClass("active");
-				$("iframe").attr("src","./staffContact.html");
-			}
-		}else{
-			$(".nav.nav-tabs li").removeClass("active");
-			$(".nav.nav-tabs").append('<li class="active staffContact"><a onclick="javascript:goStaffContact(\'staffContact\');">员工信息</a><a onclick="removeTab(\'staffContact\')" class="close">close</a></li>');
-			$("iframe").attr("src","./staffContact.html");
-		}
-	} */
 	function addTab(menuIndex){
 		var url = "";
 		var displayName = "";

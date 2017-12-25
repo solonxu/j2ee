@@ -355,6 +355,7 @@ a.ui-button:active,
 							<li class="goodsManage"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('goodsManage','/goods/list','商品资料管理');">商品资料管理</a></li>
 							<li class="staffContact"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('staffContact','/user/list','员工通讯录');">员工通讯录</a></li>
 						    <li class="vendor"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('vendor','/vendor/list','厂家资料');">厂家资料</a></li>
+						    <li class="areaManage"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('areaManage','areaManage.html','区域管理');">区域管理</a></li>
 				
 						</ul>
 					</div>

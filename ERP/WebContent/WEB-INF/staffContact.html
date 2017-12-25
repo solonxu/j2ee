@@ -15,33 +15,6 @@
 <script type="text/javascript" src="./script/jstree.checkbox.js"></script>
 <script type="text/javascript" src="./script/bootstrap.js"></script>
 <style type="text/css">
-.control-label {
-	text-align: right;
-	padding: 0px 10px;
-}
-
-.col-lg-7, .col-md-7, .col-sm-7 {
-	padding: 0px;
-}
-
-.col-lg-7, .col-md-7, .col-sm-7, .form-control {
-	height: 25px;
-}
-
-.form-control {
-	padding: 0px;
-}
-
-.row {
-	margin: 5px 0px;
-}
-
-.searchForm {
-	background-color: #f2f5ff;
-	border: 1px solid #cbd1d3;
-	border-radius: 7px;
-}
-
 .cls-title {
 	font-weight: bold;
 }
@@ -55,16 +28,8 @@ h3 {
 	font-size: 13px;
 }
 
-#staff_contact_report1_nodata_tr {
-	text-align: center;
-}
-
 #staffContactData td {
 	font-size: 13px;
-}
-
-#staff_contact_report1_nodata_tr {
-	display: none;
 }
 
 .cls-data-tr-head-list {
@@ -113,7 +78,8 @@ h3 {
 					"previous" : "上页",
 					"next" : "下页"
 				}
-			}
+			},
+			"dom" :"<<t>ip>"
 		});
 		$("#tree").jstree({
 			"checkbox" : {
@@ -173,6 +139,7 @@ h3 {
 				column.visible(true);
 			}
 		});
+		$("#staffContactData").css("width","100%");
 		if(button){
 			button.remove();
 			$("#staffContactData thead tr td:last").append(button);
@@ -252,7 +219,7 @@ h3 {
 			2、关于发信息，选中要发送人（确保有手机号），然后点击发送信息，在打开的窗口编辑发送内容，最后点击发送
 		</h3>
 	</div>
-	<div class="data">
+	<div class="data detail">
 
 		<table class="order-column" id="staffContactData">
 			<thead>
@@ -270,7 +237,7 @@ h3 {
 					<td name="phone" width="9%">联系电话</td>
 					<td name="email" width="10%">电子邮件</td>
 					<td name="hireDate" width="10%">入职日期</td>
-					<td name="remark" width="8%">备注<input class="displayTree"
+					<td name="remark" width="9%">备注<input class="displayTree"
 						type="button" onclick="createTree(this);"
 						style="width: 19px; height: 13px; background-color: transparent; border: 0px; vertical-align: top; background-image: url(./images/selectcols.gif); cursor: pointer;" />
 					</td>
@@ -305,34 +272,6 @@ h3 {
 				</tr>
 			</tbody>
 		</table>
-		<!-- <table id="staffContactData" class="order-column" >
-				<thead>
-					<tr>
-						<td>name</td>
-						<td>销售单编号</td>
-						<td>staff</td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>test</td>
-						<td>
-							<span style="color:#0000FF;cursor:pointer;" onclick="window.open('./showReport.html','查看销售单明细','toolbar=no,location=no,menubar=no')">6800022</span>
-						</td>
-						<td>test</td>
-					</tr>
-					<tr>
-						<td>123</td>
-						<td>test</td>
-						<td>test</td>
-					</tr>
-					<tr>
-						<td>gba</td>
-						<td>test</td>
-						<td>test</td>
-					</tr>
-				</tbody>
-			</table> -->
 	</div>
 </body>
 </html>

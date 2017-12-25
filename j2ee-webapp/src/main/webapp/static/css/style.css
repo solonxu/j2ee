@@ -120,7 +120,13 @@ label {
 .modal-title,.modal-header button.close{
 	margin-top:-10px;
 }
-
+.dataTable{
+	width:100%;
+	margin:0px;
+}
+.detail{
+    margin: 20px 10px 0px 10px;
+}
 a{
 	cursor: pointer;
 }
