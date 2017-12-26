@@ -7,8 +7,8 @@
 <title>ERP</title>
 <link rel="stylesheet" href="${ctxStatic}/css/bootstrap.min.css">
 <link rel="stylesheet" href="${ctxStatic}/css/jquery.dataTables.min.css">
-<link rel="stylesheet" type="text/css" href="${ctxStatic}/css/style.css">
 <link rel="stylesheet" type="text/css" href="${ctxStatic}/css/jstree.css">
+<link rel="stylesheet" type="text/css" href="${ctxStatic}/css/style.css">
 
 <script type="text/javascript" src="${ctxStatic}/js/jquery-1.12.4.js"></script>
 <script type="text/javascript" src="${ctxStatic}/js/jquery.dataTables.js"></script>
@@ -115,7 +115,8 @@ h3 {
 					"previous" : "上页",
 					"next" : "下页"
 				}
-			}
+			},
+		    "dom" :"<<t>ip>"
 		});
 		$("#tree").jstree({
 			"checkbox" : {
@@ -155,7 +156,7 @@ h3 {
 		createTable();
 		var _this = $(target);
 		var treeDiv = $(".tree");
-		treeDiv.css("top", $(".data").position().top+_this.position().top +15);
+		treeDiv.css("top", $(".detail").position().top+_this.position().top +15);
 		treeDiv.show();
 	}
 
@@ -175,6 +176,7 @@ h3 {
 				column.visible(true);
 			}
 		});
+		$("#staffContactData").css("width","100%");
 		if(button){
 			button.remove();
 			$("#staffContactData thead tr td:last").append(button);
@@ -248,13 +250,13 @@ h3 {
 			</div>
 		</div>
 	</form>
-	<div>
-		<h3>
-			<font color="red">说明</font>： 1、生日输入格式，比如9月8日，请输入0908；
-			2、关于发信息，选中要发送人（确保有手机号），然后点击发送信息，在打开的窗口编辑发送内容，最后点击发送
-		</h3>
-	</div>
-	<div class="data">
+	<div class="detail">
+		<div>
+			<h3>
+				<font color="red">说明</font>： 1、生日输入格式，比如9月8日，请输入0908；
+				2、关于发信息，选中要发送人（确保有手机号），然后点击发送信息，在打开的窗口编辑发送内容，最后点击发送
+			</h3>
+		</div>
 
 		<table class="order-column" id="staffContactData">
 			<thead>
@@ -307,34 +309,6 @@ h3 {
 				</tr>
 			</tbody>
 		</table>
-		<!-- <table id="staffContactData" class="order-column" >
-				<thead>
-					<tr>
-						<td>name</td>
-						<td>销售单编号</td>
-						<td>staff</td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>test</td>
-						<td>
-							<span style="color:#0000FF;cursor:pointer;" onclick="window.open('./showReport.html','查看销售单明细','toolbar=no,location=no,menubar=no')">6800022</span>
-						</td>
-						<td>test</td>
-					</tr>
-					<tr>
-						<td>123</td>
-						<td>test</td>
-						<td>test</td>
-					</tr>
-					<tr>
-						<td>gba</td>
-						<td>test</td>
-						<td>test</td>
-					</tr>
-				</tbody>
-			</table> -->
 	</div>
 </body>
 </html>

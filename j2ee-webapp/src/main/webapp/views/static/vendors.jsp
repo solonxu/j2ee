@@ -213,7 +213,6 @@ img{
 	</form>
 	<c:choose> 
       <c:when test="${empty message}">   
-          <br/>  
       </c:when> 
      <c:when test="${fn:contains(message,'成功')}">   
         <div>
@@ -232,11 +231,8 @@ img{
      </c:otherwise> 
 
     </c:choose> 
-
 	
-	
-	<div style="height: 15px;"></div>
-	<div>
+	<div class="detail">
 		<form method="post" onsubmit="return false" style="margin: 0px">
 			<span class="cls-title">厂家资料</span>
 			<div style="float: right;">
@@ -245,8 +241,6 @@ img{
 				<input type="button" value="导出Excel" class="cls-button2" />
 			</div>
 		</form>
-	</div>
-	<div class="data">
 		<table class="order-column" id="vendorTb">
 			<thead>
 				<tr>

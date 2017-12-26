@@ -1,11 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@ include file="/views/include.jsp"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %> 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="/static/css/jquery-ui.min.css">
 <link rel="stylesheet" href="/static/css/jquery.dataTables.min.css">
@@ -78,8 +77,8 @@ img{
 	<form action="" method="post" class="searchForm" role="form">
 		<div class="row">
 			<div class="col-lg-3 col-md-3 col-sm-3">
-				<label class="control-label col-lg-5 col-md-5 col-sm-5">区域名称</label>
-				<div class="col-lg-7 col-md-7 col-sm-7">
+				<label class="control-label col-lg-3 col-md-3 col-sm-3">路</label>
+				<div class="col-lg-9 col-md-9 col-sm-9">
 					<input type="text" class="form-control">
 				</div>
 			</div>
@@ -93,10 +92,10 @@ img{
 			<form method="post" onsubmit="return false" class="">
 				<div style="height:24px;">
 					<div class="floatLeft" style="font-weight: bold; line-height:24px;height:100%;">
-						<span>区域信息</span>
+						<span>路</span>
 					</div>
 					<div class="floatRight">
-						<input type="button" value="添 加" data-toggle="modal" data-target="#addArea" /> 
+						<input type="button" value="添 加" data-toggle="modal" data-target="#addRoad" /> 
 						<input type="button" value="删 除" />
 					</div>
 				</div>
@@ -104,21 +103,21 @@ img{
 			<table class="dataTable order-column">
 				<thead>
 					<tr>
-						<td>序号</td><td>城市名称</td><td>区域名称</td><td>编辑</td>
+						<td>序号</td><td>城市名称</td><td>区域名称</td><td>路</td><td>编辑</td>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td>1</td><td>广州市</td><td>白云区</td><td><img src="/static/images/rowedit.gif" data-toggle="modal" data-target="#addArea" /></td>
+						<td>1</td><td>广州市</td><td>白云区</td><td>金沙洲路与环洲二路</td><td><img src="/static/images/rowedit.gif" data-toggle="modal" data-target="#addRoad" /></td>
 					</tr>
 					<tr>
-						<td>1</td><td>广州市</td><td>白云区</td><td><img src="/static/images/rowedit.gif" data-toggle="modal" data-target="#addArea" /></td>
+						<td>1</td><td>广州市</td><td>白云区</td><td>机场路83号</td><td><img src="/static/images/rowedit.gif" data-toggle="modal" data-target="#addRoad" /></td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 	</div>
-	<div class="modal fade" id="addArea" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal fade" id="addRoad" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -126,7 +125,7 @@ img{
 						&times;
 					</button>
 					<h5 class="modal-title" id="myModalLabel">
-						新增区域信息
+						新增路
 					</h5>
 				</div>
 				<div class="modal-body">
@@ -137,7 +136,7 @@ img{
 									<span>详细信息</span>
 								</div>
 								<div class="floatRight">
-									<input type="button" value="保 存" onclick="saveAddArea();"/> 
+									<input type="button" value="保 存" onclick="saveAddRoad();"/> 
 									<input type="button" value="重 置" />
 								</div>
 							</div>
@@ -156,7 +155,19 @@ img{
 									</td>
 								</tr>
 								<tr>
-									<td class='cls-data-th-detail' width="120px">区域名称：</td>
+									<td class='cls-data-th-detail' width="120px">区域名称：
+									</td>
+									<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7' width="90%">
+										<font>
+											<select style="width: 95%">
+												<option value='male'>白云</option>
+												<option value='female'>从化</option>
+											</select>
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td class='cls-data-th-detail' width="120px">路：</td>
 									<td class="cls-data-td-editdetail" bgcolor="#ffffff" colspan='7'>
 										<font>
 											<input type="text" value="" style="width:95%"/>

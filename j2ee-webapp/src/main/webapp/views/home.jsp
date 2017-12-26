@@ -356,7 +356,10 @@ a.ui-button:active,
 							<li class="staffContact"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('staffContact','/user/list','员工通讯录');">员工通讯录</a></li>
 						    <li class="vendor"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('vendor','/vendor/list','厂家资料');">厂家资料</a></li>
 						    <li class="areaManage"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('areaManage','/views/areaManage.jsp','区域管理');">区域管理</a></li>
-				
+						    <li class="roadManage"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('roadManage','/views/roadManage.jsp','路管理');">路管理</a></li>
+						    <li class="floorManage"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('floorManage','/views/floorManage.jsp','楼盘管理');">楼盘管理</a></li>
+						    <li class="goodsPartManage"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('goodsPartManage','/views/goodsPartManage.jsp','配件管理');">配件管理</a></li>
+						
 						</ul>
 					</div>
 					<h3>客服管理</h3>
