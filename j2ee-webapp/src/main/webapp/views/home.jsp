@@ -225,7 +225,7 @@ a.ui-button:active,
 		$("#container").height(height-70-5);
 		$("#middle").height(height-70-5);
 		$(".displayMenu").height($("#middle").height());
-		$("iframe").height($("#middle").height()-$("#container .accountInfo").height()-$("#container ul").height());
+		$("iframe").height($("#middle").height()-$("#container ul").height());
 		/* $("iframe").width(width-210); */
 		$(".rightAlign .changeCity a").on("click", function(){
 			$(".rightAlign .changeCity").addClass("select");
@@ -271,7 +271,7 @@ a.ui-button:active,
 			$(".displayMenu").height($("#middle").height());
 			$("#container").height(height-70-5);
 			$("#menu").accordion( "refresh");
-			$("iframe").height($("#middle").height()-$("#container .accountInfo").height()-$("#container ul").height());
+			$("iframe").height($("#middle").height()-$("#container ul").height());
 		});
 		$("#container .nav").on("mouseover", "a.close", function(){
 			$(this).addClass("hover");
@@ -317,7 +317,8 @@ a.ui-button:active,
 			$(".nav.nav-tabs").append('<li class="active '+menuIndex+'"><a onclick="javascript:addTab(\''+menuIndex+'\', \''+url+'\', \''+displayName+'\');">'+displayName+'</a><a onclick="removeTab(\''+menuIndex+'\')" class="close">close</a></li>');
 			//$("iframe").attr("src", url);
 			$("iframe:visible").hide();
-			$("#container").append("<iframe src=\""+url+"\" name=\""+menuIndex+"\"></iframe>");
+			var height = $("#middle").height()-$("#container ul").height();
+			$("#container").append("<iframe src=\""+url+"\" style=\"height:"+height+"px;\" name=\""+menuIndex+"\"></iframe>");
 		}
 	}
 </script>
