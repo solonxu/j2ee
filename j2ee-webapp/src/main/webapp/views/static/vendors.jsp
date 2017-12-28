@@ -10,8 +10,8 @@
 <title>ERP</title>
 <link rel="stylesheet" href="${ctxStatic}/css/bootstrap.min.css">
 <link rel="stylesheet" href="${ctxStatic}/css/jquery.dataTables.min.css">
-<link rel="stylesheet" type="text/css" href="${ctxStatic}/css/style.css">
 <link rel="stylesheet" type="text/css" href="${ctxStatic}/css/jstree.css">
+<link rel="stylesheet" type="text/css" href="${ctxStatic}/css/style.css">
 
 <script type="text/javascript" src="${ctxStatic}/js/jquery.js"></script>
 <script type="text/javascript" src="${ctxStatic}/js/jquery.dataTables.js"></script>
@@ -69,6 +69,9 @@
 img{
 	cursor: pointer;
 }
+#vendorTb .selected{
+	background-color:#acfaf0;
+}
 </style>
 <script type="text/javascript">
 	var table = null;
@@ -119,7 +122,6 @@ img{
     	$('#newName').val(name);
     	$('#newBrand').val(brand);
     	$('#newContact').val(contact);
-    	
     	//copy search criteria 
     //	alert($("input[name='vendorId']").val())
     		//$('searchVendorId').val();
@@ -161,8 +163,28 @@ img{
 		$("#editVendor").on("hidden.bs.modal" , function(){
 			$(".forEditVendor").hide();
 		});
+		$("#vendorTb tbody td").on("click",function(){
+			//var tdObj = $(this).parent().parent();
+			if($(this).hasClass("selected")){
+	            $(this).parent().children().removeClass("selected");
+			}else{
+				$(this).parent().children().addClass("selected");
+			}
+		});
 	});
-	
+	function deleteVendor(){
+		var data = [];
+		$("#vendorTb tbody td:nth-child(2)").each(function(obj){
+			if($(this).hasClass("selected")){
+				console.log($(this).text());
+				data.push($(this).text());
+			}
+			//save all vendorId
+		});
+		$(".detail form input[name=vendorIds]").val(data.toString());
+		$(".detail form").attr("action","/vendor/delete");
+		$(".detail form").submit();
+	}
 	
 
 </script>
@@ -211,34 +233,36 @@ img{
 			</div>
 		</div>
 	</form>
-	<c:choose> 
-      <c:when test="${empty message}">   
-      </c:when> 
-     <c:when test="${fn:contains(message,'成功')}">   
-        <div>
-		  <h3>
-			 <font color="blue">${message}</font>
-		  </h3>
-	    </div>  
-     </c:when> 
-
-     <c:otherwise>
-      <div>
-		  <h3>
-			 <font color="red">${message}</font>
-		  </h3>
-	    </div>     
-     </c:otherwise> 
-
-    </c:choose> 
+	<div class="message">
+		<c:choose> 
+	      <c:when test="${empty message}">   
+	      </c:when> 
+	     <c:when test="${fn:contains(message,'成功')}">   
+	        <div>
+			  <h3>
+				 <font color="blue">${message}</font>
+			  </h3>
+		    </div>  
+	     </c:when> 
 	
+	     <c:otherwise>
+	      <div>
+			  <h3>
+				 <font color="red">${message}</font>
+			  </h3>
+		    </div>     
+	     </c:otherwise> 
+	
+	    </c:choose>
+	</div>
 	<div class="detail">
-		<form method="post" onsubmit="return false" style="margin: 0px">
+		<form method="post" style="margin: 0px">
 			<span class="cls-title">厂家资料</span>
 			<div style="float: right;">
 				<input type="button" value="添加" id="" name="" onclick="editVendor('');" /><span style="margin-left: 9px;"></span>
-				<input type="button" value="删 除" class="cls-button" /><span style="margin-left: 9px;"></span>
+				<input type="button" value="删 除" class="cls-button" onclick="deleteVendor();" /><span style="margin-left: 9px;"></span>
 				<input type="button" value="导出Excel" class="cls-button2" />
+				<input type="text" value="" name="vendorIds" style="display:none;" />
 			</div>
 		</form>
 		<table class="order-column" id="vendorTb">
@@ -270,6 +294,9 @@ img{
 					<div style="height: 230px; border: 0px none;">
 						<form method="post" action="/vendor/save" class="editVendorForm">
 							<div style="height:24px; margin-bottom:10px;">
+								<div>
+									<font color="red">说明：带有*字段为必填项。</font>
+								</div>
 								<div class="floatLeft" style="font-weight: bold; line-height:24px;height:100%;">
 									<span>厂家资料</span>
 								</div>
@@ -286,7 +313,6 @@ img{
 								     
 								     <!-- -end  -->
 								     
-									
 								</div>
 							</div>
 							<table class='cls-data-table-detail'

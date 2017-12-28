@@ -81,6 +81,7 @@ public class VendorController {
 			
 		model.addAttribute("list",json.toString());
 		model.addAttribute("searchCriteria",vendor);
+		System.out.println(model.asMap().get("message"));
 	    return "static/vendors"; 
 	 }
 	
@@ -113,6 +114,12 @@ public class VendorController {
 		
 	    
 	    return list(model,requestBean.getSearchVendor());
+	 }
+	
+	@RequestMapping(value="/delete",method=RequestMethod.POST)
+	public String save(Model model, @RequestParam String vendorIds){
+	    System.out.println("需要删除的ids："+vendorIds);
+	    return list(model);
 	 }
 	 
 	
