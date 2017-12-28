@@ -287,7 +287,8 @@ a.ui-button:active,
 		});
 	});
 	function goHome(menuIndex){
-		$("iframe").attr("src","./views/homePage.jsp");
+		$("iframe:visible:not([name=homePage])").hide();
+		$("iframe[name=homePage]").show();
 		$(".nav.nav-tabs li").removeClass("active");
 		$(".nav.nav-tabs li.myHome").addClass("active");
 	}
@@ -308,12 +309,15 @@ a.ui-button:active,
 				//但是没有激活
 				$(".nav.nav-tabs li").removeClass("active");
 				$(".nav.nav-tabs li."+menuIndex).addClass("active");
-				$("iframe").attr("src", url);
+				$("iframe:visible").hide();
+				$("iframe[name="+menuIndex+"]").show();
 			}
 		}else{
 			$(".nav.nav-tabs li").removeClass("active");
 			$(".nav.nav-tabs").append('<li class="active '+menuIndex+'"><a onclick="javascript:addTab(\''+menuIndex+'\', \''+url+'\', \''+displayName+'\');">'+displayName+'</a><a onclick="removeTab(\''+menuIndex+'\')" class="close">close</a></li>');
-			$("iframe").attr("src", url);
+			//$("iframe").attr("src", url);
+			$("iframe:visible").hide();
+			$("#container").append("<iframe src=\""+url+"\" name=\""+menuIndex+"\"></iframe>");
 		}
 	}
 </script>
@@ -392,7 +396,7 @@ a.ui-button:active,
   						
   					</li>
   				</ul>
-				<iframe src="./views/homePage.jsp">
+				<iframe src="./views/homePage.jsp" name="homePage">
 				
 				</iframe>
 			</div>
