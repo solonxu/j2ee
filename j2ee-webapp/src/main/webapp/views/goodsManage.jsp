@@ -100,10 +100,12 @@ label {
 	            $("#goodsManageData tbody tr input[type=checkbox]").each(function(index){
 	            	this.checked = true;
 	            });
+	            $("#goodsManageData tbody tr td").addClass("selected");
 			}else{
 				$("#goodsManageData tbody tr input[type=checkbox]").each(function(index){
 	            	this.checked = false;
 	            });
+				$("#goodsManageData tbody tr td").removeClass("selected");
 			}
 		});
 	});

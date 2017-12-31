@@ -388,6 +388,88 @@ a.ui-button:active,
 							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>销售员业绩统计</a></li>
 						</ul>
 					</div>
+					<h3>业务管理</h3>
+					<div>
+						<ul>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>配件采购单管理</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>采购单管理</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>采购单货品查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>采购单查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>调拨单管理</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>销售商品替换</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>进价为零</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>加急商品分析</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>定做商品管理</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>摆场量转换</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>审核销售商品</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>销售单开锁</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>厂家条形码导入</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>欠货分析</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>梳化与床类商品替换</a></li>
+						</ul>
+					</div>
+					<h3>配送管理</h3>
+					<div>
+						<ul>
+							<li class="enterWareManage"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('enterWareManage','/views/enterWare.jsp','进仓单管理');">进仓单管理</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>进仓单查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>进仓单货品查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>出仓调配</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>出仓单查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>出仓单货品查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>调拨确认【发货方】</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>调拨确认【收获方】</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>调拨单查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>调拨货品查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>冲帐单</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>货品转换单查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>货品转换单明细查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>货品转换单</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>预约送货信息</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>配送安排</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>配送安排查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>送货小组管理</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>费用提成管理</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>在线投诉</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>售后单</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>售后单查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>货品查账</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>售后单明细查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>样板商品生成条码</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>查看打印条码</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>盘点明细</a></li>
+						</ul>
+					</div>
+					<h3>财务管理</h3>
+					<div>
+						<ul>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>单据号管理</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>发票号管理</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>创建账本</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>科目表</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>帐号资料</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>凭证录入</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>凭证查阅</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>凭证审核</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>凭证登帐</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>损益表</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>资产负债表</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>出纳日记账</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>一级多栏式明细账</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>二级多栏式明细账</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>收款单查询</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>售后费用审核</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>销售日报</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>进仓单生成凭证</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>出仓单生成凭证</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>车辆费用审核</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>借支单管理</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>采购单</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>送货员业绩统计表</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>盘点流水账审核</a></li>
+							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>销售单查询</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div id="container" class="">
