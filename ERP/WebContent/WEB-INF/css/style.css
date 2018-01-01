@@ -61,7 +61,7 @@ table.dataTable tbody tr td.highlight{
 	/*white-space:nowrap;*/
 	overflow: hidden;
 	text-overflow: ellipsis;
-	width: 100%
+	width: 100%;
 }
 
 .cls-data-th-detail {
@@ -77,8 +77,9 @@ table.dataTable tbody tr td.highlight{
 }
 
 .control-label {
-	text-align: right;
-	padding: 0px 10px;
+	/* text-align: right; */
+	padding: 0px;
+	margin-top:4px;
 }
 
 .col-lg-7, .col-md-7, .col-sm-7 {
@@ -118,15 +119,23 @@ label {
     height:30px;
 }
 .modal-title,.modal-header button.close{
-	margin-top:-10px;
+	margin-top:-8px;
+}
+.modal textarea{
+	vertical-align: bottom;
+	width:100%;
+    margin-top: 2px;
 }
 .dataTable{
-	width:100%;
+	width:100%!important;
 	margin:0px;
 }
 .detail{
-    margin: 20px 10px 0px 10px;
+    margin: 10px 5px 0px 5px;
 }
 a{
 	cursor: pointer;
+}
+.description{
+	margin-top:10px;
 }
