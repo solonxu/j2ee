@@ -412,8 +412,8 @@ a.ui-button:active,
 					<div>
 						<ul>
 							<li class="enterWareManage"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('enterWareManage','/views/enterWare.jsp','进仓单管理');">进仓单管理</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>进仓单查询</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>进仓单货品查询</a></li>
+							<li class="enterWareSearch"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('enterWareSearch','/views/enterWareSearch.jsp','进仓单查询');">进仓单查询</a></li>
+							<li class="enterWareGoodsSearch"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('enterWareGoodsSearch','/views/enterWareGoodsSearch.jsp','进仓单货品查询');">进仓单货品查询</a></li>
 							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>出仓调配</a></li>
 							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>出仓单查询</a></li>
 							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>出仓单货品查询</a></li>
