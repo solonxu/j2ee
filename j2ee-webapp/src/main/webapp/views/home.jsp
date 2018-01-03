@@ -415,29 +415,29 @@ a.ui-button:active,
 							<li class="enterWareSearch"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('enterWareSearch','/views/enterWareSearch.jsp','进仓单查询');">进仓单查询</a></li>
 							<li class="enterWareGoodsSearch"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('enterWareGoodsSearch','/views/enterWareGoodsSearch.jsp','进仓单货品查询');">进仓单货品查询</a></li>
 							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>出仓调配</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>出仓单查询</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>出仓单货品查询</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>调拨确认【发货方】</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>调拨确认【收获方】</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>调拨单查询</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>调拨货品查询</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>冲帐单</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>货品转换单查询</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>货品转换单明细查询</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>货品转换单</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>预约送货信息</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>配送安排</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>配送安排查询</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>送货小组管理</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>费用提成管理</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>在线投诉</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>售后单</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>售后单查询</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>货品查账</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>售后单明细查询</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>样板商品生成条码</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>查看打印条码</a></li>
-							<li><img src="./static/images/file.png"/>&nbsp;&nbsp;<a>盘点明细</a></li>
+							<li class="exitWareSearch"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">出仓单查询</a></li>
+							<li class="exitWareGoodsSearch"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareGoodsSearch','/views/exitWareGoodsSearch.jsp','出仓单货品查询');">出仓单货品查询</a></li>
+							<li class="dbConfirmBySupplier"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('dbConfirmBySupplier','/views/dbConfirmBySupplier.jsp','调拨确认【发货方】');">调拨确认【发货方】</a></li>
+							<li class="dbConfirmByReceiver"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('dbConfirmByReceiver','/views/dbConfirmByReceiver.jsp','调拨确认【收获方】');">调拨确认【收获方】</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">调拨单查询</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">调拨货品查询</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','冲帐单');">冲帐单</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">货品转换单查询</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">货品转换单明细查询</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">货品转换单</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">预约送货信息</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','配送安排');">配送安排</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">配送安排查询</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">送货小组管理</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">费用提成管理</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">在线投诉</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">售后单</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">售后单查询</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">货品查账</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">售后单明细查询</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">样板商品生成条码</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">查看打印条码</a></li>
+							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">盘点明细</a></li>
 						</ul>
 					</div>
 					<h3>财务管理</h3>
