@@ -419,11 +419,11 @@ a.ui-button:active,
 							<li class="exitWareGoodsSearch"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareGoodsSearch','/views/exitWareGoodsSearch.jsp','出仓单货品查询');">出仓单货品查询</a></li>
 							<li class="dbConfirmBySupplier"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('dbConfirmBySupplier','/views/dbConfirmBySupplier.jsp','调拨确认【发货方】');">调拨确认【发货方】</a></li>
 							<li class="dbConfirmByReceiver"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('dbConfirmByReceiver','/views/dbConfirmByReceiver.jsp','调拨确认【收获方】');">调拨确认【收获方】</a></li>
-							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">调拨单查询</a></li>
-							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">调拨货品查询</a></li>
-							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','冲帐单');">冲帐单</a></li>
-							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">货品转换单查询</a></li>
-							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">货品转换单明细查询</a></li>
+							<li class="dbSearch"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('dbSearch','/views/dbSearch.jsp','调拨单查询');">调拨单查询</a></li>
+							<li class="dbGoodsSearch"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('dbGoodsSearch','/views/dbGoodsSearch.jsp','调拨货品查询');">调拨货品查询</a></li>
+							<li class="bills"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('bills','/views/bills.jsp','冲帐单');">冲帐单</a></li>
+							<li class="goodsTransferSearch"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('goodsTransferSearch','/views/goodsTransferSearch.jsp','货品转换单查询');">货品转换单查询</a></li>
+							<li class="goodsTransferDetail"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('goodsTransferDetail','/views/goodsTransferDetail.jsp','货品转换单明细查询');">货品转换单明细查询</a></li>
 							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">货品转换单</a></li>
 							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','出仓单查询');">预约送货信息</a></li>
 							<li class="#"><img src="./static/images/file.png"/>&nbsp;&nbsp;<a onclick="javascript:addTab('exitWareSearch','/views/exitWareSearch.jsp','配送安排');">配送安排</a></li>
